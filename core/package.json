@@ -1,0 +1,42 @@
+{
+  "name": "@quick-change/core",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "sarojaba",
+  "license": "MIT",
+  "repository": "sarojaba/quick-change",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "microbundle-crl watch --no-compress --format esm",
+    "build:core": "microbundle-crl --no-compress --format esm",
+    "lint": "eslint 'src/**/*.tsx'",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-react": "^7.29.3",
+    "microbundle-crl": "^0.13.10",
+    "props-type": "^1.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@babel/plugin-transform-regenerator": "^7.16.7",
+    "prop-types": "^15.8.1",
+    "react-error-boundary": "^3.1.4",
+    "styled-components": "^5.3.3"
+  }
+}

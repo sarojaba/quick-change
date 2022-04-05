@@ -1,0 +1,74 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Tooltip, Button } from '@quick-change/core'
+
+<Meta
+  title="Components/Tooltip"
+  component={Tooltip}
+/>
+
+export const Template = (args) => <Tooltip {...args} />
+
+# Tooltip
+
+> Other names: Popover
+> 
+> A means of displaying a description or extra information about an element, usually on hover, but can also be on click or tap. - [Component Gallery](https://component.gallery/components/tooltip/)
+
+## Default
+
+<Canvas isColumn>
+  <Story
+    name="Default"
+    args={{
+      text: 'Tooltip',
+      children: <Button>Hover me</Button>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Position
+
+<Canvas>
+  <Story
+    name="Position Top"
+    args={{
+      text: 'Top',
+      position: 'top',
+      children: <Button>Hover me</Button>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Position Bottom"
+    args={{
+      text: 'Bottom',
+      position: 'bottom',
+      children: <Button>Hover me</Button>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Position Left"
+    args={{
+      text: 'Left',
+      position: 'left',
+      children: <Button>Hover me</Button>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Position Right"
+    args={{
+      text: 'Right',
+      position: 'right',
+      children: <Button>Hover me</Button>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

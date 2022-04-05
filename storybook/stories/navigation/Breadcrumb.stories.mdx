@@ -1,0 +1,45 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Breadcrumb, BreadcrumbItem, Item } from '@quick-change/core'
+
+<Meta
+  title="Navigation/Breadcrumb"
+  component={Breadcrumb}
+  subcomponents={{ 'Breadcrumb.Item': BreadcrumbItem }}
+/>
+
+export const Template = (args) => <Breadcrumb {...args} />
+
+# Breadcrumb
+
+> Other names: Breadcrumb trail
+>
+> A list of links showing the location of the current page in the navigational hierarchy. - [Component Gallery](https://component.gallery/components/breadcrumbs/)
+
+<Canvas>
+  <Story name="Default">
+    <Breadcrumb>
+      <Breadcrumb.Item href="#bulma">Bulma</Breadcrumb.Item>
+      <Breadcrumb.Item href="#documentation">Documentation</Breadcrumb.Item>
+      <Breadcrumb.Item href="#components">Components</Breadcrumb.Item>
+      <Breadcrumb.Item active>Breadcrumb</Breadcrumb.Item>
+    </Breadcrumb>
+  </Story>
+</Canvas>
+
+## Type Inference
+
+<Canvas>
+  <Story name="Type Inference">
+    <Breadcrumb>
+      <Item href="#bulma">Bulma</Item>
+      <Item href="#documentation">Documentation</Item>
+      <Item href="#components">Components</Item>
+      <Item active>Breadcrumb</Item>
+    </Breadcrumb>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

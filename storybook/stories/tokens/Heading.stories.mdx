@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Heading } from '@quick-change/core'
+
+import { Translation } from '../../components/Translation'
+
+<Meta
+  title="Tokens/Heading"
+  component={Heading}
+/>
+
+export const Template = (args) => <Heading {...args} />
+
+export const trans = {
+  "en": {
+    "level": "Level"
+  },
+  "ko": {
+    "level": "제목의 크기를 지정할 수 있습니다. 1이 가장 크고, 6이 가장 작습니다.\n\n- `Ant Design`은 Level 6을 지원하지 않습니다."
+  }
+}
+
+# Heading
+
+> A title or caption used to introduce a new section. - [Component Gallery](https://component.gallery/components/heading/)
+
+## Level
+
+<Story name="Description Level">
+  <Translation render={locale => trans[locale]['level']} />
+</Story>
+
+<Canvas isColumn>
+  <Story
+    name="Level 1"
+    args={{
+      level: 1,
+      children: 'Level 1'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Level 2"
+    args={{
+      level: 2,
+      children: 'Level 2'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Level 3"
+    args={{
+      level: 3,
+      children: 'Level 3'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Level 4"
+    args={{
+      level: 4,
+      children: 'Level 4'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Level 5"
+    args={{
+      level: 5,
+      children: 'Level 5'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Level 6"
+    args={{
+      level: 6,
+      children: 'Level 6'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

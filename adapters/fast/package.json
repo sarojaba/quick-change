@@ -1,0 +1,43 @@
+{
+  "name": "@quick-change/fast",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "sarojaba",
+  "license": "MIT",
+  "repository": "/antd2",
+  "source": "src/index.ts",
+  "module": "dist/index.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "build": "parcel build",
+    "build:all": "parcel build",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.3.2",
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "@parcel/packager-ts": "^2.3.2",
+    "@parcel/reporter-cli": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@microsoft/fast-components": "^2.17.1",
+    "@microsoft/fast-element": "^1.6.2",
+    "@microsoft/fast-foundation": "^2.30.0",
+    "@microsoft/fast-react-wrapper": "^0.1.21",
+    "@quick-change/core": "file:../../core"
+  },
+  "files": [
+    "dist"
+  ]
+}

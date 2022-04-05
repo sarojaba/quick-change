@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Grid, GridItem } from '@quick-change/core'
+
+<Meta
+  title="Layout/Grid"
+  component={Grid}
+  subcomponents={{ 'Grid.Item': GridItem }}
+/>
+
+export const Template = (args) => <Grid {...args} />
+
+# Grid
+
+Grid 대한 설명.
+
+- Bootstrap: Learn how to modify columns with a handful of options for alignment, ordering, and offsetting thanks to our flexbox grid system. Plus, see how to use column classes to manage widths of non-grid elements.
+- Bulma: A simple way to build responsive columns
+
+## Equal Width
+
+Grid은 기본적으로 균등 배분합니다.
+
+주의 사항
+- `PaperCSS`는 균등 배분을 지원하지 않습니다.
+
+<Canvas isColumn>
+  <Story name="Equal Width">
+    <Grid>
+      <Grid.Item>First column</Grid.Item>
+      <Grid.Item>Second column</Grid.Item>
+      <Grid.Item>Third column</Grid.Item>
+      <Grid.Item>Fourth column</Grid.Item>
+    </Grid>
+  </Story>
+</Canvas>
+
+## Span
+
+- 개별 컬럼에 대해 크기 지정이 가능합니다.
+- 전체 크기는 12이고, 개별 컬럼이 나눠서 사용합니다. 이를 12 Column System 이라고도 부릅니다.
+- 크기 지정이 되어 있지 않는 컬럼은 나머지를 균등 배분합니다.
+
+주의 사항
+- 가급적 전체 컬럼의 크기를 12를 맞추도록 합시다. 그렇지 않을 경우의 이상 동작에 대해서는 아무도 책임지지 않습니다.
+- `Pico.css`는 개별 컬럼의 크기 지정을 지원하지 않습니다.
+
+<Canvas isColumn>
+  <Story
+    name="Span 1"
+    args={{
+      children: <>
+        <Grid.Item span={1}>1 of 12</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+      </>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Span 6"
+    args={{
+      children: <>
+        <Grid.Item span={6}>6 of 12</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+      </>
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Span 10"
+    args={{
+      children: <>
+        <Grid.Item span={10}>10 of 12</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+        <Grid.Item>나머지</Grid.Item>
+      </>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

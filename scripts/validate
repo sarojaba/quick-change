@@ -1,0 +1,106 @@
+#!/usr/bin/python3
+
+import os
+import sys
+
+# if len(sys.argv) < 2:
+#   print('Usage: ./check.py antd')
+#   sys.exit(1)
+
+adapters = os.listdir('./adapters')
+
+components = [
+  'AccordionAdapter',
+  'AccordionItemAdapter',
+  'AlertAdapter',
+  'AudioAdapter',
+  'AvatarAdapter',
+  'AvatarGroupAdapter',
+  'BadgeAdapter',
+  'BlockquoteAdapter',
+  'BreadcrumbAdapter',
+  'BreadcrumbItemAdapter',
+  'ButtonAdapter',
+  'ButtonGroupAdapter',
+  'CaptionAdapter',
+  'CardAdapter',
+  'CardBodyAdapter',
+  'CardFooterAdapter',
+  'CheckboxAdapter',
+  'CheckboxGroupAdapter',
+  'CheckboxUncontrolledAdapter',
+  'CiteAdapter',
+  'CodeAdapter',
+  'ColorPickerAdapter',
+  'ComboboxAdapter',
+  'ComboboxItemAdapter',
+  'ContainerAdapter',
+  'DataTableAdapter',
+  'DatePickerAdapter',
+  'DescriptionListAdapter',
+  'DescriptionListDescriptionAdapter',
+  'DescriptionListTermAdapter',
+  'DividerAdapter',
+  'EmptyAdapter',
+  'FileUploadAdapter',
+  'FormAdapter',
+  'FormItemAdapter',
+  'GridAdapter',
+  'GridItemAdapter',
+  'HeadingAdapter',
+  'ImageAdapter',
+  'IconAdapter',
+  'IconButtonAdapter',
+  'KeyboardAdapter',
+  'LinkAdapter',
+  'ListAdapter',
+  'ListItemAdapter',
+  'ModalAdapter',
+  'NavAdapter',
+  'NavItemAdapter',
+  'NumberInputAdapter',
+  'PageAdapter',
+  'PaginationAdapter',
+  'ParagraphAdapter',
+  'PasswordInputAdapter',
+  'PhoneInputAdapter',
+  'ProgressAdapter',
+  'RadioAdapter',
+  'RadioGroupAdapter',
+  'RadioUncontrolledAdapter',
+  'SampleAdapter',
+  'SelectAdapter',
+  'SelectItemAdapter',
+  'SliderAdapter',
+  'SpinnerAdapter',
+  'StrongAdapter',
+  'TabAdapter',
+  'TabGroupAdapter',
+  'TableAdapter',
+  'TableBodyAdapter',
+  'TableDataCellAdapter',
+  'TableHeadAdapter',
+  'TableHeadCellAdapter',
+  'TableFootAdapter',
+  'TableRowAdapter',
+  'TagAdapter',
+  'TextareaAdapter',
+  'TextInputAdapter',
+  'ToggleAdapter',
+  'TooltipAdapter',
+  'VideoAdapter'
+]
+
+for a in adapters:
+  if a == 'classless' or a == 'windows':
+    continue
+
+  with open(f'./adapters/{a}/src/index.ts', 'r') as f:
+    text = f.read()
+
+    not_found = list(filter(lambda c: not c in text, components))
+
+    if len(not_found) == 0:
+      continue
+
+    print(a, not_found)

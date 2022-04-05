@@ -1,0 +1,117 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { TextInput } from '@quick-change/core'
+
+<Meta
+  title="Forms/TextInput"
+  component={TextInput}
+  argTypes={{
+    size: {
+      options: ['small', 'large'],
+      control: { type: 'radio' }
+    }
+  }}
+/>
+
+export const Template = (args) => <TextInput {...args} />
+
+# TextInput
+
+> A form control that accepts a single line of text. - [Component Gallery](https://component.gallery/components/text-input/)
+
+<Canvas isColumn>
+  <Story
+    name="Default"
+    args={{
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+크기는 small, medium, large 중에 하나를 고를 수 있어요.
+
+주의 사항
+- `NES` 는 크기를 지원하지 않아요.
+- `Pico.css`는 크기를 지원하지 않아요.
+
+<Canvas isColumn>
+  <Story
+    name="Size Small"
+    args={{
+      label: "Small",
+      size: 'small',
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium"
+    args={{
+      label: "Medium (Default)",
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Large"
+    args={{
+      label: "Large",
+      size: 'large',
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## State
+
+상태는 정상, 비활성화, 읽기 전용 중 하나예요.
+
+<Canvas isColumn>
+  <Story
+    name="State Normal"
+    args={{
+      label: "Normal (Default)",
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="State Disabled"
+    args={{
+      label: "Disabled",
+      disabled: true,
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="State Read only"
+    args={{
+      label: "Read only",
+      readOnly: true,
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Message
+
+<Canvas isColumn>
+  <Story
+    name="Message"
+    args={{
+      value: '다람쥐 헌 쳇바퀴에 타고파',
+      message: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

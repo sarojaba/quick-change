@@ -1,0 +1,49 @@
+import { Meta, Description, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+import { Tag } from '@quick-change/core'
+
+<Meta
+  title="Components/Tag"
+  component={Tag}
+/>
+
+export const Template = (args) => <Tag {...args} />
+
+# Tag
+
+> Other names: Label
+>
+> A small label, generally appearing inside or in close proximity to another larger interface component, representing a status, property, or some other metadata. - [Component Gallery](https://component.gallery/components/badge/)
+
+## Type
+
+타입에 따라 배경색이 달라집니다.
+
+- 지원 타입: Primary, Secondary, Info, Success, Warning, Danger
+
+<Canvas>
+  <Story name="Info">
+    <Tag type="info">Info</Tag>
+  </Story>
+  <Story name="Success">
+    <Tag type="success">Success</Tag>
+  </Story>
+  <Story name="Warning">
+    <Tag type="warning">Warning</Tag>
+  </Story>
+  <Story name="Danger">
+    <Tag type="danger">Danger</Tag>
+  </Story>
+</Canvas>
+
+## Closable
+
+<Canvas>
+  <Story name="Closable">
+    <Tag onClose={() => alert('Closable')}>Closable</Tag>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Dropdown, DropdownItem } from '@quick-change/core'
+
+<Meta
+  title="Navigation/Dropdown"
+  component={Dropdown}
+  subcomponents={{ 'Dropdown.Item': DropdownItem }}
+/>
+
+export const Template = (args) => <Dropdown {...args} />
+
+# Dropdown
+
+> Other names: Select menu
+>
+> A menu in which options are hidden by default, but can be shown by interacting with a button. Differs from a select in that it shows actions or navigation options and is not a form input. - [Component Gallery](https://component.gallery/components/dropdown-menu/)
+
+<Canvas>
+  <Story name="Default">
+    <Dropdown title="Dropdown">
+      <Dropdown.Item>Item 1</Dropdown.Item>
+      <Dropdown.Item>Item 2</Dropdown.Item>
+    </Dropdown>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Active">
+    <Dropdown title="Dropdown" active>
+      <Dropdown.Item>Item 1</Dropdown.Item>
+      <Dropdown.Item>Item 2</Dropdown.Item>
+    </Dropdown>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

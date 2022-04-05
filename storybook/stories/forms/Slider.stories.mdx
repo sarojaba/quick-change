@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Slider } from '@quick-change/core'
+
+<Meta
+  title="Forms/Slider"
+  component={Slider}
+/>
+
+export const Template = (args) => <Slider {...args} />
+
+# Slider
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      min: 0,
+      max: 100,
+      value: 50
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      min: 0,
+      max: 100,
+      value: 50,
+      disabled: true
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

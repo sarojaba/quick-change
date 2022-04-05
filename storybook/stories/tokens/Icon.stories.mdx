@@ -1,0 +1,136 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Icon, Grid } from '@quick-change/core'
+
+import { Translation } from '../../components/Translation'
+
+<Meta
+  title="Tokens/Icon"
+  component={Icon}
+/>
+
+export const Template = (args) => <Icon {...args} />
+
+export const trans = {
+  "en": {
+    "type_desc": "Type",
+    "size_desc": "Size",
+    "common": "Common"
+  },
+  "ko": {
+    "type_desc": "타입에 따라 색상이 달라져요.",
+    "size_desc": "크기는 Small, Medium, Large 순으로 커져요.",
+    "common": "공통적으로 지원 가능한 아이콘입니다."
+  }
+}
+
+# Icon
+
+> An icon is a graphic symbol designed to visually indicate the purpose of an interface element. - [Component Gallery](https://component.gallery/components/icon/)
+
+- Ant Design은 [Ant Design Icons](https://ant.design/components/icon/)를 사용합니다.
+- Atlaskit은 [Atlaskit Icon](https://atlaskit.atlassian.com/packages/design-system/icon)를 사용합니다.
+- Bootstrap은 [Bootstrap Icons](https://icons.getbootstrap.com/)를 사용합니다.
+- Bulma는 [Font Awesome](https://fontawesome.com/)을 사용합니다.
+- Spectrum은 [Workflow icons](https://spectrum.adobe.com/page/icons/)를 사용합니다.
+- Wired Elements는 [Material Icons](https://fonts.google.com/icons)를 사용합니다.
+
+## Type
+
+<Story name="Description Type">
+  <Translation render={locale => trans[locale]['type_desc']} />
+</Story>
+
+<Canvas>
+  <Story
+    name="Type Info"
+    args={{
+      name: 'info',
+      type: 'info'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Success"
+    args={{
+      name: 'success',
+      type: 'success'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Warning"
+    args={{
+      name: 'warning',
+      type: 'warning'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Danger"
+    args={{
+      name: 'danger',
+      type: 'danger'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+<Story name="Description Size">
+  <Translation render={locale => trans[locale]['size_desc']} />
+</Story>
+
+<Canvas>
+  <Story
+    name="Small"
+    args={{
+      name: 'home',
+      size: 'small'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Medium"
+    args={{
+      name: 'home',
+      size: 'medium'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Large"
+    args={{
+      name: 'home',
+      size: 'large'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Common Icons
+
+<Story name="Description Common">
+  <Translation render={locale => trans[locale]['common']} />
+</Story>
+
+<Canvas>
+  <Story name="Common">
+    <Grid>
+      <Grid.Item><Icon name="arrow-up" /></Grid.Item>
+      <Grid.Item><Icon name="arrow-down" /></Grid.Item>
+      <Grid.Item><Icon name="arrow-left" /></Grid.Item>
+      <Grid.Item><Icon name="arrow-right" /></Grid.Item>
+      <Grid.Item><Icon name="info" /></Grid.Item>
+      <Grid.Item><Icon name="success" /></Grid.Item>
+      <Grid.Item><Icon name="warning" /></Grid.Item>
+      <Grid.Item><Icon name="danger" /></Grid.Item>
+      <Grid.Item><Icon name="home" /></Grid.Item>
+    </Grid>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

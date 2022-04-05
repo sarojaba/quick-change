@@ -1,0 +1,46 @@
+{
+  "name": "@quick-change/antd",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "sarojaba",
+  "license": "MIT",
+  "repository": "sarojaba/antd",  
+  "source": "src/index.ts",
+  "module": "dist/index.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "build": "parcel build",
+    "build:all": "parcel build",
+    "check": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.tsx'",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "17.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-react": "^7.29.3",
+    "@parcel/compressor-brotli": "^2.3.2",
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "@parcel/packager-ts": "^2.3.2",
+    "@parcel/reporter-cli": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@quick-change/core": "file:../../core",
+    "antd": "^4.18.5"
+  },
+  "files": [
+    "dist"
+  ]
+}

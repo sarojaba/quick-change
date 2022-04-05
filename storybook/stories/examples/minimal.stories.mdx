@@ -1,0 +1,500 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import {
+  Heading,
+  Paragraph,
+  Blockquote,
+  Cite,
+  DescriptionList, List,
+  HorizontalRule,
+  Table, Caption,
+  Strong, Keyboard, Code, Sample,
+  Image,
+  Audio, Video,
+  Progress,
+  Form,
+  Radio,
+  Textarea,
+  Input,
+  Button,
+  Link,
+  Select,
+  Checkbox
+} from '@quick-change/core'
+
+<Meta
+  title="Examples/Minimal"
+/>
+
+# Minimal CSS
+
+Reference: [Drop-in Minimal CSS](https://dohliam.github.io/dropin-minimal-css/)
+
+<nav role="navigation">
+  <ul>
+    <li>
+      <a href="#text">Text</a>:
+      <a href="#headings">Headings</a> ·
+      <a href="#paragraphs">Paragraphs</a> ·
+      <a href="#blockquotes">Blockquotes</a> ·
+      <a href="#lists">Lists</a> ·
+      <a href="#hr">Horizontal rules</a> ·
+      <a href="#tables">Tabular data</a> ·
+      <a href="#code">Code</a> ·
+      <a href="#inline">Inline elements</a>
+    </li>
+    <li>
+      <a href="#embedded-content">Embedded content</a>:
+      <a href="#embedded__images">Images</a> ·
+      <a href="#embedded__audio">Audio</a> ·
+      <a href="#embedded__video">Video</a> ·
+      <a href="#embedded__canvas">Canvas</a> ·
+      <a href="#embedded__meter">Meter</a> ·
+      <a href="#embedded__progress">Progress</a> ·
+      <a href="#embedded__svg">Inline SVG</a> ·
+      <a href="#embedded__iframe">IFrames</a>
+    </li>
+    <li>
+      <a href="#forms">Form elements</a>: <a href="#forms__input">Input fields</a> · <a href="#forms__select">Select menus</a> · <a href="#forms__checkbox">Checkboxes</a> · <a href="#forms__radio">Radio buttons</a> · <a href="#forms__textareas">Textareas</a> · <a href="#forms__html5">HTML5 inputs</a> · <a href="#forms__action">Action buttons</a>
+    </li>
+  </ul>
+</nav>
+
+## Text
+
+### Headings
+
+<Canvas isColumn>
+  <Story name="Headings">
+    <Heading level={1}>Heading 1</Heading>
+    <Heading level={2}>Heading 2</Heading>
+    <Heading level={3}>Heading 3</Heading>
+    <Heading level={4}>Heading 4</Heading>
+    <Heading level={5}>Heading 5</Heading>
+    <Heading level={6}>Heading 6</Heading>
+  </Story>  
+</Canvas>
+
+### Paragraphs
+
+<Canvas isColumn>
+  <Story name="Paragraphs">
+    <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra nisl, vel maximus turpis ornare a. Ut scelerisque lectus sed odio dictum scelerisque vitae quis nisi. Nulla facilisi. Phasellus vehicula convallis nisl, id suscipit dui semper at. In eu iaculis lorem. In vehicula sed mauris et suscipit. Vivamus pellentesque non massa sit amet ornare. Integer placerat est vitae nisl molestie, eget rhoncus erat vulputate. Proin ornare massa eget bibendum faucibus.</Paragraph>
+  </Story>
+</Canvas>
+
+### Blockquotes
+
+<Canvas isColumn>
+  <Story name="Blockquotes">
+    <Blockquote>
+      <Paragraph>Etiam porttitor egestas elit, at venenatis neque accumsan eu. Nulla viverra odio nisi, quis commodo tellus tristique non. Proin ac ante at orci euismod eleifend. Quisque nisi sapien, dapibus in venenatis sit amet, posuere non purus. In sit amet metus erat. Pellentesque nec neque eleifend, luctus ipsum at, ullamcorper nunc. Pellentesque sagittis, dolor eu bibendum lacinia, orci ex bibendum risus, at tincidunt augue lacus eleifend diam. Nulla facilisis velit ut est auctor sollicitudin. Morbi eget lectus a lacus maximus molestie in ut lorem.</Paragraph>
+      <Paragraph>Vestibulum ut erat sapien. Duis eros est, tempus a rutrum eu, rhoncus at ante. Vestibulum congue vel nunc et dapibus. Ut tristique facilisis orci ac pretium. Nunc et sodales turpis. Nulla pretium augue vitae faucibus tempor. Aliquam convallis mollis feugiat. Ut non pellentesque sem. Suspendisse interdum, neque at hendrerit varius, enim neque imperdiet enim, pellentesque efficitur leo orci non erat.</Paragraph>
+      <Cite>Said no one, ever.</Cite>
+    </Blockquote>
+  </Story>
+</Canvas>
+
+### Lists
+
+#### Description List
+
+<Canvas isColumn>
+  <Story name="Description List">
+    <DescriptionList>
+      <DescriptionList.Term>Description List term</DescriptionList.Term>
+      <DescriptionList.Description>This is a description list description.</DescriptionList.Description>
+    </DescriptionList>
+  </Story>
+</Canvas>
+
+#### Ordered List
+
+<Canvas isColumn>
+  <Story name="Ordered List">
+    <List as="ordered">
+      <List.Item>List Item 1</List.Item>
+      <List.Item>List Item 2</List.Item>
+      <List.Item>List Item 3
+        <List as="ordered">
+          <List.Item>Nested Ordered List Item 3.1</List.Item>
+          <List.Item>Nested Ordered List Item 3.2</List.Item>
+          <List.Item>Nested Ordered List Item 3.3</List.Item>
+        </List>
+      </List.Item>
+      <List.Item>List Item 4
+        <List as="unordered">
+          <List.Item>Nested Unordered List Item 4.1</List.Item>
+          <List.Item>Nested Unordered List Item 4.2</List.Item>
+          <List.Item>Nested Unordered List Item 4.3</List.Item>
+        </List>
+      </List.Item>
+    </List>
+  </Story>
+</Canvas>
+
+#### Unordered List
+
+<Canvas isColumn>
+  <Story name="Unordered List">
+    <List as="unordered">
+      <List.Item>List Item 1</List.Item>
+      <List.Item>List Item 2</List.Item>
+      <List.Item>List Item 3
+        <List as="ordered">
+          <List.Item>Nested Ordered List Item 3.1</List.Item>
+          <List.Item>Nested Ordered List Item 3.2</List.Item>
+          <List.Item>Nested Ordered List Item 3.3</List.Item>
+        </List>
+      </List.Item>
+      <List.Item>List Item 4
+        <List as="unordered">
+          <List.Item>Nested Unordered List Item 4.1</List.Item>
+          <List.Item>Nested Unordered List Item 4.2</List.Item>
+          <List.Item>Nested Unordered List Item 4.3</List.Item>
+        </List>
+      </List.Item>
+    </List>
+  </Story>
+</Canvas>
+
+### Horizontal rules
+
+<Canvas isColumn>
+  <Story name="Horizontal rules">
+    <HorizontalRule />
+  </Story>
+</Canvas>
+
+### Tabular data
+
+<Canvas isColumn>
+  <Story name="Tabular data">
+    <Table>
+      <Caption>Table Caption</Caption>
+      <Table.Head>
+        <tr>
+          <th>Table Heading 1</th>
+          <th>Table Heading 2</th>
+          <th>Table Heading 3</th>
+          <th>Table Heading 4</th>
+          <th>Table Heading 5</th>
+        </tr>
+      </Table.Head>
+      {/* <Table.Foot>
+        <tr>
+          <th>Table Footer 1</th>
+          <th>Table Footer 2</th>
+          <th>Table Footer 3</th>
+          <th>Table Footer 4</th>
+          <th>Table Footer 5</th>
+        </tr>
+      </Table.Foot> */}
+      <Table.Body>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+        <tr>
+          <td>Table Cell 1</td>
+          <td>Table Cell 2</td>
+          <td>Table Cell 3</td>
+          <td>Table Cell 4</td>
+          <td>Table Cell 5</td>
+        </tr>
+      </Table.Body>
+    </Table>
+  </Story>
+</Canvas>
+
+### Code
+
+<Canvas isColumn>
+  <Story name="Code">
+    <Paragraph>
+      <Strong>Keyboard input:</Strong> <Keyboard>Cmd</Keyboard>
+    </Paragraph>
+    <Paragraph>
+      <Strong>Inline code:</Strong> <Code>{`<div>code</div>`}</Code>
+    </Paragraph>
+    <Paragraph>
+      <Strong>Sample output:</Strong> <Sample>This is sample output from a computer program.</Sample>
+    </Paragraph>
+  </Story>
+</Canvas>
+
+Pre-formatted text
+
+<Canvas isColumn>
+  <Story name="Pre-formatted text">
+    <pre>{`P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+\` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~`}</pre>
+  </Story>
+</Canvas>
+
+### Inline elements
+
+<Canvas isColumn>
+  <Story name="Inline elements">
+    <Link href="#">This is a text link</Link>.<br />
+    <Strong>Strong is used to indicate strong importance.</Strong><br />
+    <em>This text has added emphasis.</em><br />
+    The <b>b element</b> is stylistically different text from normal text, without any special importance.<br />
+    The <i>i element</i> is text that is offset from the normal text.<br />
+    The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.<br />
+    <del>This text is deleted</del> and <ins>This text is inserted</ins>.<br />
+    <s>This text has a strikethrough</s>.<br />
+    Superscript<sup>®</sup>.<br />
+    Subscript for things like H<sub>2</sub>O.<br />
+    <small>This small text is small for for fine print, etc.</small><br />
+    Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr><br />
+    <q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q><br />
+    <cite>This is a citation.</cite><br />
+    The <dfn>dfn element</dfn> indicates a definition.<br />
+    The <mark>mark element</mark> indicates a highlight.<br />
+    The <var>variable element</var>, such as <var>x</var> = <var>y</var>.<br />
+    The time element: <time dateTime="2013-04-06T12:32+00:00">2 weeks ago</time><br />
+  </Story>
+</Canvas>
+
+## Embedded content
+
+### Images
+
+No `<figure>` element
+
+<Canvas isColumn>
+  <Story name="No <figure> element">
+    <Link href="https://commons.wikimedia.org/wiki/File:Colouring_pencils.jpg">
+      <Image
+        src="https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Colouring_pencils.jpg"
+        alt="Colouring pencils by MichaelMaggs"
+      />
+    </Link>
+  </Story>
+</Canvas>
+
+Wrapped in a `<figure>` element, no `<figcaption>`
+
+<Canvas isColumn>
+  <Story name="Wrapped in a <figure> element, no <figcaption>">
+    <figure>
+      <Link href="https://commons.wikimedia.org/wiki/File:Coloured,_textured_craft_card_edit.jpg">
+        <Image
+          src="https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Coloured%2C_textured_craft_card_edit.jpg"
+          alt="Coloured, textured craft card by MichaelMaggs"
+        />
+      </Link>
+    </figure>
+  </Story>  
+</Canvas>
+
+Wrapped in a `<figure>` element, with a `<figcaption>`
+
+<Canvas isColumn>
+  <Story name="Wrapped in a <figure> element, with a <figcaption>">
+    <figure>
+      <Link href="https://commons.wikimedia.org/wiki/File:Opening_chess_position_from_black_side.jpg">
+        <Image
+          src="https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Opening_chess_position_from_black_side.jpg"
+          alt="Opening chess position from black side by MichaelMaggs"
+        />
+      </Link>
+      <figcaption>Here is a caption for this image.</figcaption>
+    </figure>
+  </Story>
+</Canvas>
+
+### Audio
+
+<Canvas isColumn>
+  <Story name="Audio">
+    <Audio
+      controls
+      src="https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Broke For Free - Night Owl.mp3"
+    />
+  </Story>
+</Canvas>
+
+### Video
+
+<Canvas isColumn>
+  <Story name="Video">
+    <Video
+      controls
+      src="https://github.com/benhosmer/HTML5-Test-Videos/blob/master/big_buck_bunny.mp4?raw=true"
+    />
+  </Story>
+</Canvas>
+
+### Canvas
+
+<Canvas isColumn>
+  <Story name="Canvas">
+    <canvas>canvas</canvas>
+  </Story>
+</Canvas>
+
+### Meter
+
+<Canvas isColumn>
+  <Story name="Meter">
+    <meter value="2" min="0" max="10">2 out of 10</meter>
+  </Story>
+</Canvas>
+
+### Progress
+
+<Canvas isColumn>
+  <Story name="Progress">
+    <Progress>progress</Progress>
+  </Story>
+</Canvas>
+
+### Inline SVG
+
+<Canvas isColumn>
+  <Story name="Inline SVG">
+    <svg width="100px" height="100px">
+      <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
+    </svg>
+  </Story>
+</Canvas>
+
+### IFrame
+
+<Canvas isColumn>
+  <Story name="IFrame">
+    <iframe src="index.html" height="300" />
+  </Story>
+</Canvas>
+
+## Form elements
+
+### Input fields
+
+<Canvas isColumn>
+  <Story name="Input fields">
+    <Form>
+      <Input name="input__text" label="Text Input" type="text" placeholder="Text Input" />
+      <Input name="input__password" label="Password" type="password" placeholder="Type your Password" />
+      <Input name="input__webaddress" label="Web Address" type="url" placeholder="http://yoursite.com" />
+      <Input name="input__emailaddress" label="Email Address" type="email" placeholder="name@email.com" />
+      <Input name="input__phone" label="Phone Number" type="tel" placeholder="(999) 999-9999" />
+      <Input name="input__search" label="Search" type="search" placeholder="Enter Search Term" />
+      <Input name="input__text2" label="Number Input" type="number" placeholder="Enter a Number" />
+      <Input name="input__text3" label="Error" type="text" placeholder="Text Input" className="error" />
+      <Input name="input__text4" label="Valid" type="text" placeholder="Text Input" className="valid" />
+    </Form>
+  </Story>
+</Canvas>
+
+### Select menus
+
+<Canvas isColumn>
+  <Story name="Select menus">
+    <Form>
+      <Select title="Select">
+        <Select.Item>Option One</Select.Item>
+        <Select.Item>Option Two</Select.Item>
+        <Select.Item>Option Three</Select.Item>
+      </Select>
+    </Form>
+  </Story>
+</Canvas>
+
+### Checkboxes
+
+<Canvas isColumn>
+  <Story name="Checkboxes">
+    <Form>
+      <Checkbox.Group>
+        <Checkbox label="Choice A" />
+        <Checkbox label="Choice B" />
+        <Checkbox label="Choice C" />
+      </Checkbox.Group>
+    </Form>
+  </Story>
+</Canvas>
+
+### Radio buttons
+
+<Canvas isColumn>
+  <Story name="Radio buttons">
+    <Form>
+      <Radio.Group name="radio">
+        <Radio value="radio1" label="Option 1" checked />
+        <Radio value="radio2" label="Option 2" checked />
+        <Radio value="radio3" label="Option 3" checked />
+      </Radio.Group>
+    </Form>
+  </Story>
+</Canvas>
+
+### Textareas
+
+<Canvas isColumn>
+  <Story name="Textareas">
+    <Form>
+      <Textarea name="textarea" label="Textarea" rows="8" cols="48" placeholder="Enter your message here" />
+    </Form>
+  </Story>
+</Canvas>
+
+### HTML5 inputs
+
+<Canvas isColumn>
+  <Story name="HTML5 inputs">
+    <Form>
+      <Input name="ic" label="Color input" type="color" value="#000000" />
+      <Input name="in" label="Number input" type="number" min="0" max="10" value="5" />
+      <Input name="ir" label="Range input" type="range" value="10" />
+      <Input name="idd" label="Date input" type="date" value="1970-01-01" />
+      <Input name="idm" label="Month input" type="month" value="1970-01" />
+      <Input name="idw" label="Week input" type="week" value="1970-W01" />
+      <Input name="idt" label="Datetime input" type="datetime" value="1970-01-01T00:00:00Z" />
+      <Input name="idtl" label="Datetime-local input" type="datetime-local" value="1970-01-01T00:00" />
+    </Form>
+  </Story>
+</Canvas>
+
+### Action buttons
+
+<Canvas isColumn>
+  <Story name="Action buttons">
+    <Form>
+      <Input type="submit" value="<input type=submit />" />
+      <Input type="button" value="<input type=button />" />
+      <Input type="reset" value="<input type=reset />" />
+      <Input type="submit" value="<input disabled />" disabled />
+    </Form>
+    <Form>
+      <Button type="submit">{`<button type=submit />`}</Button>
+      <Button>{`<button type=button />`}</Button>
+      <Button type="reset">{`<button type=reset />`}</Button>
+      <Button disabled>{`<button disabled />`}</Button>
+    </Form>
+  </Story>
+</Canvas>

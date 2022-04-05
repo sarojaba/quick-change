@@ -1,0 +1,39 @@
+{
+  "name": "@quick-change/instructure",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "sarojaba",
+  "license": "MIT",
+  "repository": "sarojaba/quick-change",
+  "source": "src/index.ts",
+  "module": "dist/index.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "build": "parcel build",
+    "build:all": "parcel build",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.3.2",
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "@parcel/packager-ts": "^2.3.2",
+    "@parcel/reporter-cli": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@instructure/ui": "^8.17.0",
+    "@quick-change/core": "file:../../core"
+  },
+  "files": [
+    "dist"
+  ]
+}

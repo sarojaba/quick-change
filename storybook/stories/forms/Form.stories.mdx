@@ -1,0 +1,67 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Form, FormItem, Input, Select, Textarea, Checkbox, Radio, Button } from '@quick-change/core'
+
+<Meta
+  title="Forms/Form"
+  component={Form}
+  subcomponents={{ 'Form.Item': FormItem }}
+/>
+
+export const Template = (args) => <Form {...args} />
+
+# Form
+
+> A grouping of input controls that allow a user to submit information to a server. - [Component Gallery](https://component.gallery/components/form/)
+
+https://bulma.io/documentation/form/general/#complete-form-example
+
+<Canvas>
+  <Story
+    name="Example"
+    args={{
+      children: <>
+        <Form.Item name="name" label="Name">
+          <Input placeholder="Text input" />
+        </Form.Item>
+        <Form.Item name="username" label="Username">
+          <Input value="bulma" />
+        </Form.Item>
+        <Form.Item name="email" label="Email">
+          <Input type="email" value="hello@" />
+        </Form.Item>
+        <Form.Item name="subject" label="Subject">
+          <Select>
+            <Select.Item>Select dropdown</Select.Item>
+            <Select.Item>With options</Select.Item>
+          </Select>
+        </Form.Item>
+        <Form.Item name="message" label="Message">
+          <Textarea placeholder="Textarea"></Textarea>
+        </Form.Item>
+        <Form.Item name="confirm">
+          <Checkbox.Group>
+            <Checkbox label="I agree to the terms and conditions" />
+          </Checkbox.Group>
+        </Form.Item>
+        <Form.Item name="options">
+          <Radio.Group inline>
+            <Radio label="Yes" />
+            <Radio label="No" />
+          </Radio.Group>
+        </Form.Item>
+        <Form.Item name="submit">
+          <Button.Group>
+            <Button type="link">Submit</Button>
+            <Button type="link">Cancel</Button>
+          </Button.Group>
+        </Form.Item>
+      </>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

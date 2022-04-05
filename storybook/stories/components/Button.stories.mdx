@@ -1,0 +1,358 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+import { Button, ButtonGroup, Group } from '@quick-change/core'
+
+<Meta
+  title="Components/Button"
+  component={Button}
+  subcomponents={{ 'Button.Group': ButtonGroup }}
+  argTypes={{
+    type: {
+      options: [
+        'default', 'primary', 'secondary', 'tertiary',
+        'info', 'success', 'warning', 'danger'
+      ],
+      control: { type: 'select' }
+    },
+    size: {
+      options: ['small', 'large'],
+      control: { type: 'radio' }
+    }
+  }}
+/>
+
+export const Template = (args) => <Button {...args} />
+
+# Button
+
+> Buttons trigger an action such as submitting a form or showing/hiding an interface component. - [Component Gallery](https://component.gallery/components/button/)
+
+## Type
+
+타입에 따라 색상이 달라집니다.
+
+- `Bulma`는 `Secondary` 타입이 지원되지 않습니다.
+- `Windows`는 타입이 지원되지 않습니다.
+
+<Canvas>
+  <Story
+    name="Type Primary"
+    args={{
+      type: 'primary',
+      children: 'Primary'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Secondary"
+    args={{
+      type: 'secondary',
+      children: 'Secondary',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Tertiary"
+    args={{
+      type: 'tertiary',
+      children: 'Tertiary',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Success"
+    args={{
+      type: 'success',
+      children: 'Success',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Warning"
+    args={{
+      type: 'warning',
+      children: 'Warning',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Danger"
+    args={{
+      type: 'danger',
+      children: 'Danger',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Info"
+    args={{
+      type: 'info',
+      children: 'Info',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Outline
+
+배경색을 제거하고, 외곽선만 남깁니다.
+
+외곽선의 색상은 타입에 따라 달라집니다.
+
+주의 사항
+- `NES`는 외곽선이 지원되지 않습니다.
+- `Windows`는 외곽선이 지원되지 않습니다.
+
+<Canvas>
+  <Story
+    name="Outline Default"
+    args={{
+      shape: 'outline',
+      type: 'default',
+      children: 'Outline'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Primary"
+    args={{
+      shape: 'outline',
+      type: 'primary',
+      children: 'Primary'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Secondary"
+    args={{
+      shape: 'outline',
+      type: 'secondary',
+      children: 'Secondary'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Success"
+    args={{
+      shape: 'outline',
+      type: 'success',
+      children: 'Success'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Warning"
+    args={{
+      shape: 'outline',
+      type: 'warning',
+      children: 'Warning'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Danger"
+    args={{
+      shape: 'outline',
+      type: 'danger',
+      children: 'Danger'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Outline Info"
+    args={{
+      shape: 'outline',
+      type: 'info',
+      children: 'Info'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Clear
+
+<Canvas>
+  <Story
+    name="Clear Default"
+    args={{
+      shape: 'clear',
+      type: 'default',
+      children: 'Clear'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Primary"
+    args={{
+      shape: 'clear',
+      type: 'primary',
+      children: 'Primary'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Secondary"
+    args={{
+      shape: 'clear',
+      type: 'secondary',
+      children: 'Secondary'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Success"
+    args={{
+      shape: 'clear',
+      type: 'success',
+      children: 'Success'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Warning"
+    args={{
+      shape: 'clear',
+      type: 'warning',
+      children: 'Warning'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Danger"
+    args={{
+      shape: 'clear',
+      type: 'danger',
+      children: 'Danger'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Clear Info"
+    args={{
+      shape: 'clear',
+      type: 'info',
+      children: 'Info'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+버튼의 크기를 조절할 수 있습니다.
+
+버튼의 크기는 small, medium, large 중 선택할 수 있습니다.
+
+주의 사항
+- `NES`는 크기가 지원되지 않습니다.
+- `Windows`는 크기가 지원되지 않습니다.
+
+<Canvas>
+  <Story
+    name="Size Small"
+    args={{
+      size: 'small',
+      children: 'Small',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium"
+    args={{
+      children: 'Medium',
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Large"
+    args={{
+      size: 'large',
+      children: 'Large',
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+      children: 'Default'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Block
+
+<Canvas>
+  <Story
+    name="Block"
+    args={{
+      type: 'primary',
+      block: true,
+      children: 'Default'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Click Event
+
+<Canvas>
+  <Story
+    name="Click Event"
+    args={{
+      type: 'primary',
+      onClick: () => alert('Clicked'),
+      children: 'Click Me'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button Group
+
+[Gallery](https://component.gallery/components/button-group/)
+
+Other names: Toolbar
+
+A wrapper for multiple, related buttons.
+
+<Canvas>
+  <Story name="Button Group">
+    <Button.Group>
+      <Button type="primary" shape="outline">Button 1</Button>
+      <Button type="primary" shape="outline">Button 2</Button>
+    </Button.Group>
+  </Story>
+</Canvas>
+
+## Vertical
+
+<Canvas>
+  <Story name="Vertical">
+    <Button.Group vertical>
+      <Button type="primary" shape="outline">Button 1</Button>
+      <Button type="primary" shape="outline">Button 2</Button>
+    </Button.Group>
+  </Story>
+</Canvas>
+
+## Type Inference
+
+<Canvas>
+  <Story name="Type Inference">
+    <Group>
+      <Button type="primary" shape="outline">Button 1</Button>
+      <Button type="primary" shape="outline">Button 2</Button>
+    </Group>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

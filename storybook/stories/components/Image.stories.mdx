@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Image } from '@quick-change/core'
+
+<Meta
+  title="Components/Image"
+  component={Image}
+/>
+
+export const Template = (args) => <Image {...args} />
+
+# Image
+
+> Other names: Picture
+>
+> An element for embedding images. - [Component Gallery](https://component.gallery/components/image/)
+
+## No Image
+
+<Canvas>
+  <Story
+    name="No image"
+    args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      src: 'http://awesome-devblog.netlify.app/favicon.png'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+`width`, `height` 속성을 이용해 크기를 조절할 수 있습니다.
+
+<Canvas>
+  <Story
+    name="Size"
+    args={{
+      src: 'http://awesome-devblog.netlify.app/favicon.png',
+      width: 100,
+      height: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

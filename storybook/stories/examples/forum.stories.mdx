@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+
+import { Nav, Button, Tag, Container, Grid, Heading } from '@quick-change/core'
+
+<Meta
+  title="Examples/Forum"
+/>
+
+# Forum
+
+Reference: [Forum example](https://bulmatemplates.github.io/bulma-templates/templates/forum.html)
+
+<Canvas>
+  <Story name="Forum">
+    <Nav>
+      <Nav.Item>Home</Nav.Item>
+      <Nav.Item>Landing</Nav.Item>
+      <Nav.Item>Blog</Nav.Item>
+      <Nav.Item>Album</Nav.Item>
+      <Nav.Item>Kanban</Nav.Item>
+      <Nav.Item>Search</Nav.Item>
+      <Nav.Item>Tabs</Nav.Item>
+    </Nav>
+		<Container>
+			<Grid>
+        <Grid.Item size={3}>
+          <Button type="primary" size="large" block href="#">New Post</Button>
+          <Tag type="primary">Dashboard</Tag>
+          <Tag type="link">Customers</Tag>
+          <Tag type="danger">Authentication</Tag>
+          <Tag type="dark">Payments</Tag>
+          <Tag type="success">Transfers</Tag>
+          <Tag type="warning">Balance</Tag>
+          <Tag>Question</Tag>
+        </Grid.Item>
+				<Grid.Item size={9}>
+          <Heading level={4}>Bulma: How do you center a button in a box?</Heading>
+          <Heading level={4}>How can I make a bulma button go full width?</Heading>
+          <Heading level={4}>TypeError: Data must be a string or a buffer when trying touse vue-bulma-tabs</Heading>
+          <Heading level={4}>How to vertically center elements in Bulma?</Heading>
+          <Heading level={4}>I'm trying to use hamburger menu on bulma css, but it doesn't work. What is wrong?</Heading>
+          <Heading level={4}>How to make tiles wrap with Bulma CSS?</Heading>
+				</Grid.Item>
+			</Grid>
+		</Container>
+  </Story>
+</Canvas>

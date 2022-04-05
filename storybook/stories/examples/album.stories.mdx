@@ -1,0 +1,88 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Container, Heading, Paragraph, Strong, Button, Grid, Card } from '@quick-change/core'
+
+<Meta
+  title="Examples/Album"
+/>
+
+# Album
+
+Reference: [Album example](https://getbootstrap.com/docs/5.1/examples/album/)
+
+<Canvas>
+  <Story name="Album">
+    <header>
+      <div className="collapse bg-dark" id="navbarHeader">
+        <Container>
+          <Grid>
+            <Grid.Item>
+              <Heading level={4} className="text-white">About</Heading>
+              <Paragraph className="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</Paragraph>
+            </Grid.Item>
+            <Grid.Item>
+              <Heading level={4} className="text-white">Contact</Heading>
+              <ul className="list-unstyled">
+                <li><a href="#" className="text-white">Follow on Twitter</a></li>
+                <li><a href="#" className="text-white">Like on Facebook</a></li>
+                <li><a href="#" className="text-white">Email me</a></li>
+              </ul>
+            </Grid.Item>
+          </Grid>
+        </Container>
+      </div>
+      <div className="navbar navbar-dark bg-dark shadow-sm">
+        <Container>
+          <a href="#" className="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+            <Strong>Album</Strong>
+          </a>
+          <Button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </Button>
+        </Container>
+      </div>
+    </header>
+    <main>
+      <Container>
+        <Grid>
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <Title level={1} class="fw-light">Album example</Title>
+            <Paragraph class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</Paragraph>
+            <Paragraph>
+              <Button type="primary" href="#">Main call to action</Button>
+              <Button type="secondary" href="#">Secondary action</Button>
+            </Paragraph>
+          </div>
+        </Grid>
+      </Container>
+      <div class="album py-5 bg-light">
+        <Container>
+          <Grid>
+            <Grid.Item>
+              <Card image="https://via.placeholder.com/150x100">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                <Button.Group>
+                  <Button type="secondary" size="small" outline>View</Button>
+                  <Button type="secondary" size="small" outline>Edit</Button>
+                </Button.Group>
+              </Card>
+            </Grid.Item>
+            <Grid.Item>
+              <Card image="https://via.placeholder.com/150x100">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                <Button.Group>
+                  <Button type="secondary" size="small" outline>View</Button>
+                  <Button type="secondary" size="small" outline>Edit</Button>
+                </Button.Group>
+              </Card>
+            </Grid.Item>
+          </Grid>
+        </Container>
+      </div>
+    </main>
+  </Story>  
+</Canvas>

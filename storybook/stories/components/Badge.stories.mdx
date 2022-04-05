@@ -1,0 +1,58 @@
+import { Meta, Description, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+import { Badge, Avatar, Button } from '@quick-change/core'
+
+<Meta
+  title="Components/Badge"
+  component={Badge}
+/>
+
+export const Template = (args) => <Badge {...args} />
+
+# Badge
+
+> Other names: Tag, Label
+>
+> A small label, generally appearing inside or in close proximity to another larger interface component, representing a status, property, or some other metadata. - [Component Gallery](https://component.gallery/components/badge/)
+
+<Canvas>
+  <Story name="Avatar">
+    <Badge count={1}>
+      <Avatar />
+    </Badge>
+  </Story>
+  <Story name="Button">
+    <Badge count={2}>
+      <Button>Button</Button>
+    </Badge>
+  </Story>
+</Canvas>
+
+## Type
+
+<Canvas>
+  <Story name="Type Primary">
+    <Badge type="primary" count={1}>
+      <Avatar />
+    </Badge>
+  </Story>
+  <Story name="Type Secondary">
+    <Badge type="secondary" count={1}>
+      <Avatar />
+    </Badge>
+  </Story>
+  <Story name="Type Warning">
+    <Badge type="warning" count={1}>
+      <Avatar />
+    </Badge>
+  </Story>
+  <Story name="Type Danger">
+    <Badge type="danger" count={1}>
+      <Avatar />
+    </Badge>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

@@ -1,0 +1,116 @@
+import { Meta, Story } from '@storybook/addon-docs'
+
+import {
+  Grid,
+  Accordion,
+  Alert,
+  Avatar,
+  Badge,
+  Tag,
+  Button,
+  Card,
+  Form, TextInput, Textarea, Link, Table, Tab, Select, Radio, Checkbox
+} from '@quick-change/core'
+
+<Meta
+  title="Examples/Gallery"
+/>
+
+# Gallery
+
+- [Toolkit Gallery](https://github.com/microsoft/vscode-webview-ui-toolkit#webview-ui-toolkit-for-visual-studio-code)
+
+<Story name="Gallery">
+  <Grid>
+    <Grid.Item span={4}>
+      <Button.Group>
+        <Button type="primary">Button</Button>
+        <Button type="secondary">Button</Button>
+        {/* <IconButton icon="home" /> */}
+      </Button.Group>
+      <Form>
+        <TextInput
+          name="textinput"
+          label="Label"
+          value="Populated text"
+        />
+        <Select name="select" label="Label">
+          <Select.Item value="1">Option 1</Select.Item>
+          <Select.Item value="2">Option 2</Select.Item>
+          <Select.Item value="3">Option 3</Select.Item>
+        </Select>
+        <Textarea
+          name="textarea"
+          label="Label"
+          placeholder="Placeholder"
+        />
+      </Form>
+      <Link>Sample link</Link>
+    </Grid.Item>
+    <Grid.Item span={3}>
+      <Form>
+        <Radio.Group name="radio" label="Label">
+          <Radio label="Label" value="1" />
+          <Radio label="Label" value="2" />
+          <Radio label="Label" value="3" disabled />
+        </Radio.Group>
+        <Checkbox.Group name="checkbox" label="Label">
+          <Checkbox label="Label" checked />
+          <Checkbox label="Label" checked />
+          <Checkbox label="Label" disabled />
+        </Checkbox.Group>
+      </Form>
+      <Badge>1</Badge>
+      <Tag>Tag</Tag>
+    </Grid.Item>
+    <Grid.Item span={5}>
+      <Table>
+        <Table.Head>
+          <Table.Row>
+            <Table.HeadCell>Extension name</Table.HeadCell>
+            <Table.HeadCell>Author</Table.HeadCell>
+            <Table.HeadCell>Installs</Table.HeadCell>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          <Table.Row>
+            <Table.DataCell>Python</Table.DataCell>
+            <Table.DataCell>Microsoft</Table.DataCell>
+            <Table.DataCell>42,651,663</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>C/C++</Table.DataCell>
+            <Table.DataCell>Microsoft</Table.DataCell>
+            <Table.DataCell>23,513,104</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>Jupyter</Table.DataCell>
+            <Table.DataCell>Microsoft</Table.DataCell>
+            <Table.DataCell>22,620,933</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>ESLint</Table.DataCell>
+            <Table.DataCell>Dirk Baeumer</Table.DataCell>
+            <Table.DataCell>16,512,593</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>Prettier</Table.DataCell>
+            <Table.DataCell>Prettier</Table.DataCell>
+            <Table.DataCell>15,347,264</Table.DataCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.DataCell>Pylance</Table.DataCell>
+            <Table.DataCell>Microsoft</Table.DataCell>
+            <Table.DataCell>15,213,612</Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+      <Tab.Group active="1">
+        <Tab id="1" title="TAB 1">Replace with content</Tab>
+        <Tab id="2" title="TAB 2" />
+        <Tab id="3" title="TAB 3" />
+        <Tab id="4" title="TAB 4" />
+      </Tab.Group>
+    </Grid.Item>
+  </Grid>
+</Story>

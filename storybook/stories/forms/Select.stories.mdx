@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Select, SelectItem, Item } from '@quick-change/core'
+
+<Meta
+  title="Forms/Select"
+  component={Select}
+  subcomponents={{ 'Select.Item': SelectItem }}
+/>
+
+export const Template = (args) => <Select {...args} />
+
+# Select
+
+> Other names: Dropdown, Select input
+>
+> A form input used for selecting a value: when collapsed it shows the currently selected option and when expanded, it shows a scrollable list of predefined options for the user to choose from. - [Component Gallery](https://component.gallery/components/select/)
+
+`Select`는 `Dropdown`과 생긴건 비슷하지만, 다음과 같은 차이점이 있다.
+- 선택은 하지만, 액션은 수행하지 않는다.
+- 주로 `Form`에서 사용된다.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: <Select.Item value="1">1</Select.Item>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Multiple
+
+<Canvas>
+  <Story name="Multiple">
+    <Select multiple>
+      <Select.Item value="1">1</Select.Item>
+      <Select.Item value="2">2</Select.Item>
+    </Select>
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+      children: <Select.Item value="1">1</Select.Item>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Type Inference
+
+<Canvas>
+  <Story
+    name="Type Inference"
+    args={{
+      children: <Item value="1">1</Item>
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

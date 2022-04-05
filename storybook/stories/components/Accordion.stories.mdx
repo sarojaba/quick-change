@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+import { Accordion, AccordionItem, Item } from '@quick-change/core'
+
+<Meta
+  title="Components/Accordion"
+  component={Accordion}
+  subcomponents={{ 'Accordion.Item': AccordionItem }}
+/>
+
+export const Template = (args) => <Accordion {...args} />
+
+# Accordion
+
+> Other names: Arrow toggle, Collapse, Collapsible sections, Collapsible, Details, Disclosure, Expandable, Expander, ShowyHideyThing
+>
+> An accordion is a vertical stack of interactive headings used to toggle the display of further information; each item can be 'collapsed' with just a short label visible or 'expanded' to show the full content. - [Component Gallery](https://component.gallery/components/accordion/)
+
+<Canvas>
+  <Story name="Default">
+    <Accordion>
+      <Accordion.Item title="Item 1">Content</Accordion.Item>
+      <Accordion.Item title="Item 2">Content</Accordion.Item>
+    </Accordion>
+  </Story>
+</Canvas>
+
+## Multiple
+
+동시에 여러 항목을 열어놓을 수 있어요.
+
+<Canvas>
+  <Story name="Multiple">
+    <Accordion multiple>
+      <Accordion.Item title="Item 1">Content</Accordion.Item>
+      <Accordion.Item title="Item 2">Content</Accordion.Item>
+    </Accordion>
+  </Story>
+</Canvas>
+
+## Type Inference
+
+간략하게 쓸 수 있어요.
+
+<Canvas>
+  <Story name="Type Inference">
+    <Accordion>
+      <Item label="Item 1">Content</Item>
+      <Item label="Item 2">Content</Item>
+    </Accordion>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

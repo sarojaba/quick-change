@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Tab, TabGroup } from '@quick-change/core'
+
+<Meta
+  title="Navigation/Tab"
+  component={Tab}
+  subcomponents={{ 'Tab.Group': TabGroup }}
+/>
+
+export const Template = (args) => <Tab {...args} />
+
+export const lipsums = [
+  'The quick brown fox jumps over the lazy dog',
+  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+]
+
+# Tab
+
+> Other names: Tabbed interface
+>
+> Tabbed interfaces are a way of navigating between multiple panels, reducing clutter and fitting more into a smaller space. - [Component Gallery](https://component.gallery/components/tabs/)
+
+- `NES`는 `Tab` 을 지원하지 않습니다.
+- 현재 `Windows`는 `Tab`이 동작하지 않습니다.
+
+## Tab Group
+
+<Canvas>
+  <Story name="Group">
+    <Tab.Group active="todo">
+      <Tab id="todo" title="TODO">{lipsums[0]}</Tab>
+      <Tab id="doing" title="DOING">{lipsums[1]}</Tab>
+      <Tab id="done" title="DONE">{lipsums[0]}</Tab>
+    </Tab.Group>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

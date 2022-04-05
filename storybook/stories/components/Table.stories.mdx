@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import {
+  Table, TableHead, TableBody, TableFoot, TableRow, TableDataCell, TableHeadCell
+} from '@quick-change/core'
+
+<Meta
+  title="Components/Table"
+  component={Table}
+  subcomponents={{
+    'Table.Head': TableHead,
+    'Table.Body': TableBody,
+    'Table.Foot': TableFoot,
+    'Table.Row': TableRow,
+    'Table.DataCell': TableDataCell,
+    'Table.HeadCell': TableHeadCell,
+  }}
+/>
+
+export const Template = (args) => <Table {...args} />
+
+# Table
+
+> A component for displaying large amounts of data in rows and columns. - [Component Gallery](https://component.gallery/components/table/)
+
+## Like HTML
+
+<Canvas>
+  <Story name="HTML">
+    <Table>
+      <Table.Head>
+        <Table.Row>
+          <Table.HeadCell>#</Table.HeadCell>
+          <Table.HeadCell>First</Table.HeadCell>
+          <Table.HeadCell>Last</Table.HeadCell>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
+        <Table.Row>
+          <Table.DataCell>1</Table.DataCell>
+          <Table.DataCell>Mark</Table.DataCell>
+          <Table.DataCell>Otto</Table.DataCell>
+        </Table.Row>
+        <Table.Row>
+          <Table.DataCell>2</Table.DataCell>
+          <Table.DataCell>Jacob</Table.DataCell>
+          <Table.DataCell>Thornton</Table.DataCell>
+        </Table.Row>
+      </Table.Body>
+    </Table>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

@@ -1,0 +1,149 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Progress } from '@quick-change/core'
+
+<Meta
+  title="Components/Progress"
+  component={Progress}
+/>
+
+export const Template = (args) => <Progress {...args} />
+
+# Progress
+
+> Other names: Progress
+>
+> A horizontal bar indicating the current completion status of a long-running task, usually updated continuously as the task progresses, instead of in discrete steps. - [Component Gallery](https://component.gallery/components/progress-bar/)
+
+## Mode
+
+Determinate
+- 얼마나 진행되었는지 나타낼 때 사용합니다.
+- `value`와 `max` 값을 요구합니다.
+
+Indeterminate
+- 얼마나 기다려야할지 모를때에 사용합니다.
+- `value`와 `max` 값을 지정하지 않습니다.
+
+주의 사항
+- `NES`는 Indeterminate 모드를 지원하지 않습니다.
+- `PaperCSS`는 Indeterminate 모드를 지원하지 않습니다.
+
+<Canvas isColumn>
+  <Story
+    name="Determinate"
+    args={{
+      value: 50,
+      max: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Indeterminate"
+    args={{
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Type
+
+- 타입에 따라 배경색이 달라집니다.
+- 지원 타입: Info, Success, Warning, Danger
+
+<Canvas isColumn>
+  <Story
+    name="Type Info"
+    args={{
+      type: 'info',
+      value: 25,
+      max: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Success"
+    args={{
+      type: 'success',
+      value: 50,
+      max: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Warning"
+    args={{
+      type: 'warning',
+      value: 75,
+      max: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Danger"
+    args={{
+      type: 'danger',
+      value: 100,
+      max: 100
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Size
+
+- 크기에 따라 높이가 달라집니다.
+- 지원 크기: Small, Medium, Large
+
+주의 사항
+- `NES`는 크기를 지원하지 않습니다.
+- `PaperCSS`는 크기를 지원하지 않습니다.
+
+<Canvas isColumn>
+  <Story
+    name="Size Small"
+    args={{
+      value: 33,
+      max: 100,
+      size: "small"
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium"
+    args={{
+      value: 66,
+      max: 100,
+      size: "medium"
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Large"
+    args={{
+      value: 100,
+      max: 100,
+      size: "large"
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Label
+<Canvas>
+  <Story
+    name="Label"
+    args={{
+      value: 100,
+      max: 100,
+      label: true
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Complete
+
+## Properties
+
+<ArgsTable />

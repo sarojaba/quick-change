@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Link } from '@quick-change/core'
+
+<Meta
+  title="Navigation/Link"
+  component={Link}
+/>
+
+export const Template = (args) => <Link {...args} />
+
+# Link
+
+> Other names: Anchor, Hyperlink
+>
+> A link is a reference to a resource. This can be external (e.g. a different web page) or internal (e.g. a specific element in the current document). - [Component Gallery](https://component.gallery/components/link/)
+
+<Canvas>
+  <Story
+    name="Default"    
+    args={{
+      href: '#',
+      children: 'Link'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

@@ -1,0 +1,84 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Checkbox, CheckboxGroup, CheckboxUncontrolled } from '@quick-change/core'
+
+<Meta
+  title="Forms/Checkbox"
+  component={Checkbox}
+  subcomponents={{
+    'Checkbox.Group': CheckboxGroup,
+    'Checkbox.Uncontrolled': CheckboxUncontrolled
+  }}
+/>
+
+export const Template = (args) => <Checkbox {...args} />
+
+# Checkbox
+
+> An input for choosing from predefined options: - [Component Gallery](https://component.gallery/components/checkbox/)
+>
+> - when used alone, it gives a binary choice (checked/unchecked);
+> - in a group it allows the user to select multiple values from a list of options.
+
+## Label
+
+<Canvas isColumn>
+  <Story name="Unlabelled">
+    <Checkbox />
+  </Story>
+  <Story name="Labelled">
+    <Checkbox label="Default" />
+  </Story>
+</Canvas>
+
+## State
+
+<Canvas isColumn>
+  <Story name="State Checked">
+    <Checkbox label="Checked" checked />
+  </Story>
+  <Story name="State Disabled">
+    <Checkbox label="Disabled" disabled />
+  </Story>
+  <Story name="State Checked Disabled">
+    <Checkbox label="Checked and disabled" checked disabled />
+  </Story>
+</Canvas>
+
+## Uncontrolled
+
+<Canvas isColumn>
+  <Story name="Uncontrolled">
+    <Checkbox.Uncontrolled label="Checked" defaultChecked />
+  </Story>
+</Canvas>
+
+## Checkbox Group
+
+### Label
+
+<Canvas>
+  <Story name="Label">
+    <Checkbox.Group label="Checkbox Group">
+      <Checkbox label="Default" />
+      <Checkbox label="Checked" checked />
+      <Checkbox label="Disabled" disabled />
+    </Checkbox.Group>
+  </Story>
+</Canvas>
+
+### Inline
+
+<Canvas>
+  <Story name="Inline">
+    <Checkbox.Group inline>
+      <Checkbox label="Default" />
+      <Checkbox label="Checked" checked />
+      <Checkbox label="Disabled" disabled />
+    </Checkbox.Group>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

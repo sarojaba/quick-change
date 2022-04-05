@@ -1,0 +1,27 @@
+{
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "build:core": {
+      "dependsOn": [
+        "^build:core"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "build:core"
+      ]
+    },
+    "build:all": {
+      "dependsOn": [
+        "build:core"
+      ]
+    },
+    "storybook": {
+      "cache": false
+    },
+    "build:storybook": {
+    },
+    "clean": {
+    }
+  }
+}

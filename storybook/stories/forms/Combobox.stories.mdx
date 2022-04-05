@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Combobox, ComboboxItem } from '@quick-change/core'
+
+<Meta
+  title="Forms/Combobox"
+  component={Combobox}
+  subcomponents={{ 'Combobox.Item': ComboboxItem }}
+/>
+
+export const Template = (args) => <Combobox {...args} />
+
+# Combobox
+
+> Other names: Autocomplete
+>
+> An input that behaves similarly to a select, with the addition of a free text input to filter options. - [Component Gallery](https://component.gallery/components/combobox/)
+
+<Canvas>
+  <Story name="Default">
+    <Combobox value="Item 1">
+      <Combobox.Item>Item 1</Combobox.Item>
+      <Combobox.Item>Item 2</Combobox.Item>
+      <Combobox.Item>Item 3</Combobox.Item>
+    </Combobox>
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

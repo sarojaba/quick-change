@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { DataTable } from '@quick-change/core'
+
+<Meta
+  title="Components/DataTable"
+  component={DataTable}
+/>
+
+export const Template = (args) => <DataTable {...args} />
+
+# DataTable
+
+> A component for displaying large amounts of data in rows and columns. - [Component Gallery](https://component.gallery/components/table/)
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      data: [
+        {
+          name: 'Mike',
+          age: 32,
+          address: '10 Downing Street',
+        },
+        {
+          name: 'John',
+          age: 42,
+          address: '10 Downing Street',
+        }
+      ],
+      columns: [
+        {
+          title: 'Name',
+          key: 'name',
+        },
+        {
+          title: 'Age',
+          key: 'age',
+        },
+        {
+          title: 'Address',
+          key: 'address',
+        }
+      ]
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

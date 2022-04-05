@@ -1,0 +1,89 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Input } from '@quick-change/core'
+
+<Meta
+  title="Forms/Input"
+  component={Input}
+  argTypes={{
+    type: {
+      options: ['button', 'email', 'password', 'text'],
+      control: { type: 'radio' }
+    },
+    size: {
+      options: ['small', 'large'],
+      control: { type: 'radio' }
+    }
+  }}
+/>
+
+export const Template = (args) => <Input {...args} />
+
+# Input
+
+> A form control that accepts a single line of text. - [Component Gallery](https://component.gallery/components/text-input/)
+
+## Type
+
+지원 타입은 text, button, email, password, number, tel 이고, 기본값은 text 입니다.
+
+<Canvas isColumn>
+  <Story
+    name="Type Text"
+    args={{
+      label: "Text (Default)",
+      type: 'text',
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Button"
+    args={{
+      label: "Button",
+      type: 'button',
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Email"
+    args={{
+      label: "Email",
+      type: 'email',
+      value: 'sarojaba@gmail.com'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Password"
+    args={{
+      label: "Password",
+      type: 'password',
+      value: '다람쥐 헌 쳇바퀴에 타고파'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Number"
+    args={{
+      label: 'Number',
+      type: 'number',
+      value: 1
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Type Phone"
+    args={{
+      label: 'Phone',
+      type: 'tel',
+      value: '010-1234-5678'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

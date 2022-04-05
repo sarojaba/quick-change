@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Toggle } from '@quick-change/core'
+
+<Meta
+  title="Components/Toggle"
+  component={Toggle}
+/>
+
+export const Template = (args) => <Toggle {...args} />
+
+# Toggle
+
+> Other names: Switch, Lightswitch, Toggle button
+> 
+> A control used to switch between two states: often on or off. - [Component Gallery](https://component.gallery/components/toggle/)
+
+## Default
+
+<Canvas isColumn>
+  <Story name="Default">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas isColumn>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

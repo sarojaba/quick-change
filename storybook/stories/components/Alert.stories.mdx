@@ -1,0 +1,83 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Alert } from '@quick-change/core'
+
+<Meta
+  title="Components/Alert"
+  component={Alert}
+/>
+
+export const Template = (args) => <Alert {...args} />
+
+export const pangram = 'The quick brown fox jumps over the lazy dog'
+
+# Alert
+
+> Other names: Notification, Feedback, Message, Banner
+>
+> A way of informing the user of important changes in a prominent way. - [Component Gallery](https://component.gallery/components/alert/)
+
+<Canvas isColumn>
+  <Story name="Default">
+    <Alert title="Default">
+      {pangram}
+    </Alert>
+  </Story>
+</Canvas>
+
+## Type
+
+- 타입에 따라 배경색이 달라져요.
+- 지원 타입: `Info`, `Success`, `Warning`, `Danger`
+
+<Canvas isColumn>
+  <Story name="Info">
+    <Alert type="info" title="Info" />
+  </Story>
+  <Story name="Success">
+    <Alert type="success" title="Success" />
+  </Story>
+  <Story name="Warning">
+    <Alert type="warning" title="Warning" />
+  </Story>
+  <Story name="Danger">
+    <Alert type="danger" title="Danger" />
+  </Story>
+</Canvas>
+
+## Icon
+
+타입별 아이콘을 표시할 수 있어요.
+
+<Canvas isColumn>
+  <Story name="Icon Info">
+    <Alert type="info" icon title="Info" />
+  </Story>
+  <Story name="Icon Success">
+    <Alert type="success" icon title="Success" />
+  </Story>
+  <Story name="Icon Warning">
+    <Alert type="warning" icon title="Warning" />
+  </Story>
+  <Story name="Icon Danger">
+    <Alert type="danger" icon title="Danger" />
+  </Story>
+</Canvas>
+
+## Closable
+
+원하면 닫을 수 있어요.
+
+<Canvas isColumn>
+  <Story name="Closable">
+    <Alert
+      type="info"
+      onClose={() => alert('Closable')}
+      title="Closable"
+    />
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />

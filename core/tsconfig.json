@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "jsx": "react",
+    "target": "ES2016",
+    "moduleResolution": "Node"
+  },
+}

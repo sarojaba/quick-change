@@ -1,0 +1,6 @@
+packages:
+  # all packages in subdirs of below
+  - 'adapters/**'
+  - 'core/**'
+  - 'storybook/**'
+  - 'homepage/**'

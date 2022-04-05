@@ -1,0 +1,141 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+
+import { Container, Grid, Link, Button, Nav, Heading, Paragraph, HorizontalRule, Blockquote, List } from '@quick-change/core'
+
+<Meta
+  title="Examples/Blog"
+/>
+
+# Blog
+
+Reference: [Blog example](https://getbootstrap.com/docs/5.1/examples/blog/)
+
+<Canvas>
+  <Story name="Blog">
+    <header>
+      <Container>  
+        <Grid>
+          <Grid.Item>
+            <Link href="#">Subscribe</Link>
+          </Grid.Item>
+          <Grid.Item>
+            <Link href="#">Large</Link>
+          </Grid.Item>
+          <Grid.Item>
+            <Link href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+            </Link>
+            <Button type="secondary" size="small" shape="outline" href="#">Sign up</Button>
+          </Grid.Item>
+        </Grid>
+        <Nav>
+          <Nav.Item href="#">World</Nav.Item>
+          <Nav.Item href="#">U.S.</Nav.Item>
+          <Nav.Item href="#">Techonology</Nav.Item>
+          <Nav.Item href="#">Design</Nav.Item>
+          <Nav.Item href="#">Culture</Nav.Item>
+          <Nav.Item href="#">Business</Nav.Item>
+          <Nav.Item href="#">Politics</Nav.Item>
+          <Nav.Item href="#">Opinion</Nav.Item>
+          <Nav.Item href="#">Science</Nav.Item>
+          <Nav.Item href="#">Health</Nav.Item>
+          <Nav.Item href="#">Style</Nav.Item>
+          <Nav.Item href="#">Travel</Nav.Item>
+        </Nav>
+      </Container>
+    </header>
+    <main>
+      <Container>
+        <Heading level={1}>Title of a longer featured blog post</Heading>
+        <Paragraph>Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</Paragraph>
+        <Paragraph>
+          <Link href="#">Continue reading...</Link>
+        </Paragraph>
+        <Grid>
+          <Grid.Item>
+            <Grid>
+              <Grid.Item>
+                <Strong>World</Strong>
+                <Heading level={3}>Featured post</Heading>
+                <Paragraph>Nov 12</Paragraph>
+                <Paragraph>This is a wider card with supporting text below as a natural lead-in to additional content.</Paragraph>
+                <Link href="#">Continue reading</Link>
+              </Grid.Item>
+              <Grid.Item>
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </Grid.Item>
+            </Grid>
+          </Grid.Item>
+          <Grid.Item>
+            <Grid>
+              <Grid.Item>
+                <Strong>Design</Strong>
+                <Heading level={3}>Post title</Heading>
+                <Paragraph>Nov 11</Paragraph>
+                <Paragraph>This is a wider card with supporting text below as a natural lead-in to additional content.</Paragraph>
+                <Link href="#">Continue reading</Link>
+              </Grid.Item>
+              <Grid.Item>
+                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              </Grid.Item>
+            </Grid>
+          </Grid.Item>
+        </Grid>
+        <Grid>
+          <Grid.Item span={8}>
+            <Heading level={3}>From the Firehose</Heading>
+            <article>
+              <Heading level={2}>Sample blog post</Heading>
+              <Paragraph>January 1, 2021 by <Link href="#">Mark</Link></Paragraph>
+              <Paragraph>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</Paragraph>
+              <HorizontalRule />
+              <Paragraph>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</Paragraph>
+              <Heading level={2}>Blockquotes</Heading>
+              <Paragraph>This is an example blockquote in action:</Paragraph>
+              <Blockquote>Quoted text goes here.</Blockquote>
+              <Paragraph>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</Paragraph>
+              <Heading level={3}>Example lists</Heading>
+              <Paragraph>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</Paragraph>
+              <List as="unordered">
+                <List.Item>First list item</List.Item>
+                <List.Item>Second list item with a longer description</List.Item>
+                <List.Item>Third list item to close it out</List.Item>
+              </List>
+              <Paragraph>And this is an ordered list:</Paragraph>
+              <List as="ordered">
+                <List.Item>First list item</List.Item>
+                <List.Item>Second list item with a longer description</List.Item>
+                <List.Item>Third list item to close it out</List.Item>
+              </List>
+            </article>
+          </Grid.Item>
+          <Grid.Item span={4}>
+            <Heading level={4}>About</Heading>
+            <Paragraph>Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</Paragraph>
+            <Heading level={4}>Archives</Heading>
+            <List as="unordered">
+              <List.Item>March 2021</List.Item>
+              <List.Item>February 2021</List.Item>
+              <List.Item>January 2021</List.Item>
+              <List.Item>December 2020</List.Item>
+              <List.Item>November 2020</List.Item>
+              <List.Item>October 2020</List.Item>
+              <List.Item>September 2020</List.Item>
+              <List.Item>August 2020</List.Item>
+              <List.Item>July 2020</List.Item>
+              <List.Item>June 2020</List.Item>
+              <List.Item>May 2020</List.Item>
+              <List.Item>April 2020</List.Item>
+            </List>
+            <Heading level={4}>Elsewhere</Heading>
+            <List as="unordered">
+              <List.Item>GitHub</List.Item>
+              <List.Item>Twitter</List.Item>
+              <List.Item>Facebook</List.Item>
+            </List>
+          </Grid.Item>
+        </Grid>
+      </Container>
+    </main>
+  </Story>
+</Canvas>

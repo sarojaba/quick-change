@@ -1,0 +1,74 @@
+{
+  "name": "@quick-change/atlassian",
+  "version": "1.0.0",
+  "description": "Made with create-react-library",
+  "author": "sarojaba",
+  "license": "MIT",
+  "repository": "sarojaba/atlassian",
+  "source": "src/index.ts",
+  "module": "dist/index.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "build": "parcel build",
+    "build:all": "parcel build",
+    "check": "tsc --noEmit",
+    "lint": "eslint 'src/**/*.tsx'",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.3.2",
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "@parcel/packager-ts": "^2.3.2",
+    "@parcel/reporter-cli": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-react": "^7.29.3",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@atlaskit/avatar": "^20.5.2",
+    "@atlaskit/badge": "^15.0.8",
+    "@atlaskit/breadcrumbs": "^11.5.0",
+    "@atlaskit/button": "^16.1.4",
+    "@atlaskit/checkbox": "^12.3.5",
+    "@atlaskit/css-reset": "^6.3.4",
+    "@atlaskit/datetime-picker": "^11.1.4",
+    "@atlaskit/dropdown-menu": "^11.0.1",
+    "@atlaskit/dynamic-table": "^14.4.3",
+    "@atlaskit/flag": "^14.5.0",
+    "@atlaskit/form": "^8.4.6",
+    "@atlaskit/icon": "^21.10.0",
+    "@atlaskit/modal-dialog": "^12.2.0",
+    "@atlaskit/onboarding": "^10.3.3",
+    "@atlaskit/page": "^12.1.0",
+    "@atlaskit/page-layout": "^1.1.0",
+    "@atlaskit/pagination": "^14.1.4",
+    "@atlaskit/progress-bar": "^0.3.9",
+    "@atlaskit/radio": "^5.3.4",
+    "@atlaskit/select": "^15.2.5",
+    "@atlaskit/tabs": "^13.2.4",
+    "@atlaskit/tag": "^11.2.2",
+    "@atlaskit/textarea": "^4.2.4",
+    "@atlaskit/textfield": "^5.1.4",
+    "@atlaskit/theme": "^12.1.0",
+    "@atlaskit/tokens": "^0.4.2",
+    "@atlaskit/tooltip": "^17.5.3",
+    "@quick-change/core": "file:../../core",
+    "react-intl": "^2.6",
+    "styled-components": "^3.2"
+  },
+  "files": [
+    "dist"
+  ]
+}

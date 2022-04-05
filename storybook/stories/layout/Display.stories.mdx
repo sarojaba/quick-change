@@ -1,0 +1,68 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs';
+
+import { Display } from '@quick-change/core'
+
+<Meta
+  title="Layout/Display"
+  component={Display}
+/>
+
+export const Template = (args) => <Display {...args} />
+
+# Display
+
+Display에 대한 설명.
+
+## Size
+
+- 표시 영역의 가로 길이에 따라 표시 여부가 달라집니다.
+- 지원 크기: small, medium-down, medium, medium-up, large
+- medium-down 은 small 과 medium 을 포함하는 범위입니다.
+- medium-up은 medium 과 large 를 포함하는 범위입니다.
+
+<Canvas isColumn>
+  <Story
+    name="Size Small"
+    args={{
+      size: 'small',
+      children: 'Small (Mobile)'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium Down"
+    args={{
+      size: 'medium-down',
+      children: 'Medium Down (Mobile or Tablet)'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium"
+    args={{
+      size: 'medium',
+      children: 'Medium (Tablet)'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Medium Up"
+    args={{
+      size: 'medium-up',
+      children: 'Medium Up (Tablet or Desktop)'
+    }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Size Large"
+    args={{
+      size: 'large',
+      children: 'Large (Desktop)'
+    }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Properties
+
+<ArgsTable />
