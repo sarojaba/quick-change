@@ -13,13 +13,13 @@ import {
 } from '@quick-change/core'
 
 import * as Antd from '@quick-change/antd'
-import * as Atlassian from '@quick-change/atlassian'
+// import * as Atlassian from '@quick-change/atlassian'
 import * as Bootstrap from '@quick-change/bootstrap'
 
 function App() {
   const catalog = {
     'antd': Antd,
-    'atlassian': Atlassian,
+    // 'atlassian': Atlassian,
     'bootstrap': Bootstrap
   }
 
@@ -45,7 +45,7 @@ function App() {
               }}
             >
               <Radio label="Ant Design" value="antd" />
-              <Radio label="Atlassian" value="atlassian" />
+              {/* <Radio label="Atlassian" value="atlassian" /> */}
               {/* <Radio label="Base Web" value="base-web" /> */}
               <Radio label="Bootstrap" value="bootstrap" />
             </RadioGroup>
@@ -73,12 +73,12 @@ function App() {
     >
       <Button>Hello</Button>
     </DesignSystemProvider>
-    <DesignSystemProvider
+    {/* <DesignSystemProvider
       catalog={catalog}
       name="atlassian"
     >
       <Button>Hello</Button>
-    </DesignSystemProvider>
+    </DesignSystemProvider> */}
     <DesignSystemProvider
       catalog={catalog}
       name="bootstrap"

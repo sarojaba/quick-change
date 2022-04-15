@@ -1,15 +1,27 @@
 {
   "name": "@quick-change/core",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "sarojaba",
+  "version": "0.1.1",
+  "description": "Core library of Quick Change",
+  "keywords": [
+    "react",
+    "design system"
+  ],
+  "homepage": "https://quick-change.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/sarojaba/quick-change/issues",
+    "email": "sarojaba@gmail.com"
+  },
+  "author": "sarojaba <sarojaba@gmail.com>",
   "license": "MIT",
-  "repository": "sarojaba/quick-change",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarojaba/quick-change.git"
+  },
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "npm": ">=7.0.0"
   },
   "scripts": {
@@ -19,8 +31,8 @@
     "clean": "rm -rf dist node_modules .turbo"
   },
   "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.14.0",

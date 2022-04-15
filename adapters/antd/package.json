@@ -1,14 +1,26 @@
 {
   "name": "@quick-change/antd",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "sarojaba",
+  "version": "0.1.1",
+  "description": "Quick Change Adapter for Ant Design",
+  "keywords": [
+    "react",
+    "design system"
+  ],
+  "homepage": "https://quick-change.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/sarojaba/quick-change/issues",
+    "email": "sarojaba@gmail.com"
+  },
+  "author": "sarojaba <sarojaba@gmail.com>",
   "license": "MIT",
-  "repository": "sarojaba/antd",  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarojaba/quick-change.git"
+  },
   "source": "src/index.ts",
   "module": "dist/index.js",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "npm": ">=7.0.0"
   },
   "scripts": {
@@ -20,7 +32,8 @@
     "clean": "rm -rf dist node_modules .turbo"
   },
   "peerDependencies": {
-    "react": "17.0.2"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.14.0",

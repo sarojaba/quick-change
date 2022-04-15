@@ -10,12 +10,11 @@
     "build:core": "turbo run build:core",
     "build": "turbo run build",
     "build:all": "turbo run build:all",
-    "storybook": "cd storybook; pnpm storybook",
     "build:storybook": "turbo run build:storybook",
     "clean": "turbo run clean; rm -rf .parcel-cache node_modules pnpm-lock.yaml"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
+    "react": "^18.0.0",
     "webpack": "*"
   },
   "devDependencies": {
