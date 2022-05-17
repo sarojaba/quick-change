@@ -1,28 +1,15 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  name: PropTypes.string,
-  value: PropTypes.node,
-  label: PropTypes.string,
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func
+export interface RadioProps {
+  name?: string,
+  value?: any,
+  label?: string,
+  checked?: boolean,
+  disabled?: boolean,
+  onChange?: any
 }
-
-const defaultProps = {
-  name: undefined,
-  value: undefined,
-  label: undefined,
-  checked: false,
-  disabled: false,
-  onChange: undefined
-}
-
-export type RadioProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Radio({ name, value, label, checked, disabled, onChange }: RadioProps) {
   const { RadioAdapter } = useComponents()
@@ -37,9 +24,6 @@ export function Radio({ name, value, label, checked, disabled, onChange }: Radio
     />
   )
 }
-
-Radio.propTypes = propTypes
-Radio.defaultProps = defaultProps
 
 /**
  * Sub components

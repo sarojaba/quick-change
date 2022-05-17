@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.node,
-  children: PropTypes.node
+export interface ComboboxProps {
+  label?: string,
+  value?: any,
+  children?: any
 }
-
-const defaultProps = {
-  label: undefined,
-  value: undefined,
-  children: undefined
-}
-
-export type ComboboxProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Combobox({ label, value, children }: ComboboxProps) {
   const { ComboboxAdapter } = useComponents()
@@ -26,9 +16,6 @@ export function Combobox({ label, value, children }: ComboboxProps) {
     </ComboboxAdapter>
   )
 }
-
-Combobox.propTypes = propTypes
-Combobox.defaultProps = defaultProps
 
 /**
  * Sub components

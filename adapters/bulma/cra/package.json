@@ -1,14 +1,26 @@
 {
-  "name": "@quick-change/bulma",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "sarojaba",
+  "name": "@quick-change/bulma-cra",
+  "version": "0.1.0",
+  "description": "Quick Change Adapter for Bulma",
+  "keywords": [
+    "react",
+    "design system"
+  ],
+  "homepage": "https://quick-change.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/sarojaba/quick-change/issues",
+    "email": "sarojaba@gmail.com"
+  },
+  "author": "sarojaba <sarojaba@gmail.com>",
   "license": "MIT",
-  "repository": "sarojaba/bulma",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarojaba/quick-change.git"
+  },
   "module": "dist/index.js",
   "source": "src/index.ts",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "npm": ">=7.0.0"
   },
   "scripts": {
@@ -31,7 +43,7 @@
     "parcel": "^2.3.2"
   },
   "dependencies": {
-    "@quick-change/core": "file:../../core",
+    "@quick-change/core": "file:../../../core",
     "rbx": "^2.2.0"
   },
   "files": [

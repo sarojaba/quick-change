@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  breakpoint: PropTypes.string,
-  align: PropTypes.node,
-  children: PropTypes.node
+export interface ContainerProps {
+  breakpoint: string,
+  align: any,
+  children: any
 }
-
-const defaultProps = {
-  breakpoint: undefined,
-  align: undefined,
-  children: undefined
-}
-
-export type ContainerProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Container({ breakpoint, align, children }: ContainerProps) {
   const { ContainerAdapter } = useComponents()
@@ -27,6 +17,3 @@ export function Container({ breakpoint, align, children }: ContainerProps) {
     </ContainerAdapter>
   )
 }
-
-Container.propTypes = propTypes
-Container.defaultProps = defaultProps

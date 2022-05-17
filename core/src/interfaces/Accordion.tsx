@@ -1,20 +1,11 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents, ScopeProvider } from '../providers'
 
-const propTypes = {
-  multiple: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.element)
+export interface AccordionProps {
+  multiple: boolean,
+  children: any
 }
-
-const defaultProps = {
-  multiple: false,
-  children: []
-}
-
-export type AccordionProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Accordion({ multiple, children }: AccordionProps) {
   const { AccordionAdapter } = useComponents()
@@ -26,9 +17,6 @@ export function Accordion({ multiple, children }: AccordionProps) {
     </AccordionAdapter>
   )
 }
-
-Accordion.propTypes = propTypes
-Accordion.defaultProps = defaultProps
 
 /**
  * Sub components

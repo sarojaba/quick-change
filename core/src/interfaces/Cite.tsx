@@ -1,18 +1,10 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  children: PropTypes.node
+export interface CiteProps {
+  children: any
 }
-
-const defaultProps = {
-  children: undefined
-}
-
-export type CiteProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Cite({ children }: CiteProps) {
   const { CiteAdapter } = useComponents()
@@ -21,6 +13,3 @@ export function Cite({ children }: CiteProps) {
     <CiteAdapter>{children}</CiteAdapter>
   )
 }
-
-Cite.propTypes = propTypes
-Cite.defaultProps = defaultProps

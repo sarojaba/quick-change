@@ -1,6 +1,4 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
@@ -29,22 +27,10 @@ import { eliminateFragment } from '../util'
   }</DataTable.Column>
 </DataTable> */}
 
-const propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
-  columns: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      key: PropTypes.string
-    })
-  )
+export interface DataTableProps {
+  data: Array<any>,
+  columns: Array<any>
 }
-
-const defaultProps = {
-  data: [],
-  columns: []
-}
-
-export type DataTableProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function DataTable({ data, columns }: DataTableProps) {
   const { DataTableAdapter } = useComponents()
@@ -52,6 +38,3 @@ export function DataTable({ data, columns }: DataTableProps) {
     <DataTableAdapter data={data} columns={columns} />
   )
 }
-
-DataTable.propTypes = propTypes
-DataTable.defaultProps = defaultProps

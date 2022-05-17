@@ -1,18 +1,10 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  children: PropTypes.node
+export interface TableHeadProps {
+  children: any
 }
-
-const defaultProps = {
-  children: undefined
-}
-
-export type TableHeadProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function TableHead({ children }: TableHeadProps) {
   const { TableHeadAdapter } = useComponents()
@@ -22,6 +14,3 @@ export function TableHead({ children }: TableHeadProps) {
     </TableHeadAdapter>
   )
 }
-
-TableHead.propTypes = propTypes
-TableHead.defaultProps = defaultProps

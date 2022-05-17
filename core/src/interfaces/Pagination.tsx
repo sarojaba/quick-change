@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  current: PropTypes.number,
-  total: PropTypes.number,
-  onChange: PropTypes.func
+export interface PaginationProps {
+  current: number,
+  total: number,
+  onChange: any
 }
-
-const defaultProps = {
-  current: 1,
-  total: 5,
-  onChange: undefined
-}
-
-export type PaginationProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Pagination({ current, total, onChange }: PaginationProps) {
   const { PaginationAdapter } = useComponents()
@@ -28,6 +18,3 @@ export function Pagination({ current, total, onChange }: PaginationProps) {
     />
   )
 }
-
-Pagination.propTypes = propTypes
-Pagination.defaultProps = defaultProps

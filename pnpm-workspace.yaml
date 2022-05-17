@@ -4,3 +4,4 @@ packages:
   - 'core/**'
   - 'storybook/**'
   - 'homepage/**'
+  - 'examples/**'

@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  responsive: PropTypes.bool,
-  gapless: PropTypes.bool,
-  children: PropTypes.node
+export interface GridProps {
+  responsive?: boolean,
+  gapless?: boolean,
+  children?: any
 }
-
-const defaultProps = {
-  responsive: false,
-  gapless: false,
-  children: undefined
-}
-
-export type GridProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Grid({ responsive, gapless, children }: GridProps) {
   const { GridAdapter } = useComponents()
@@ -26,9 +16,6 @@ export function Grid({ responsive, gapless, children }: GridProps) {
     </GridAdapter>
   )
 }
-
-Grid.propTypes = propTypes
-Grid.defaultProps = defaultProps
 
 /**
  * Sub components

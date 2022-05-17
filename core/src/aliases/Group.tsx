@@ -1,6 +1,4 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import {
   Avatar,
@@ -10,15 +8,9 @@ import {
   Tab
 } from '../interfaces'
 
-const propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element)
+export interface GroupProps {
+  children: Array<any>
 }
-
-const defaultProps = {
-  children: []
-}
-
-export type GroupProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Group({ children }: GroupProps) {
   
@@ -59,6 +51,3 @@ function isSameType(children: React.ReactNode | React.ReactNode[], type: (props:
   return React.Children.toArray(children)
     .every(child => child['type'] === type)
 }
-
-Group.propTypes = propTypes
-Group.defaultProps = defaultProps

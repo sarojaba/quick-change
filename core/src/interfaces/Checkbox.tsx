@@ -1,24 +1,13 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  label: PropTypes.string,
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func
+export interface CheckboxProps {
+  label?: string,
+  checked?: boolean,
+  disabled?: boolean,
+  onChange?: any
 }
-
-const defaultProps = {
-  label: '',
-  checked: false,
-  disabled: false,
-  onChange: () => {}
-}
-
-export type CheckboxProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Checkbox({ label, checked, disabled, onChange }: CheckboxProps) {
   const { CheckboxAdapter } = useComponents()
@@ -31,9 +20,6 @@ export function Checkbox({ label, checked, disabled, onChange }: CheckboxProps) 
     />
   )
 }
-
-Checkbox.propTypes = propTypes
-Checkbox.defaultProps = defaultProps
 
 /**
  * Sub components

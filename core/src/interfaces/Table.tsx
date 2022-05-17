@@ -1,10 +1,8 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-import { eliminateFragment } from '../util'
+// import { eliminateFragment } from '../util'
 
 // Usage: Display table
 {/* <Table data={data.data} /> */}
@@ -29,25 +27,14 @@ import { eliminateFragment } from '../util'
   }</Table.Column>
 </Table> */}
 
-const propTypes = {
-  striped: PropTypes.bool,
-  hover: PropTypes.bool,
-  bordered: PropTypes.bool,
-  small: PropTypes.bool,
-  responsive: PropTypes.bool,
-  children: PropTypes.node
+export interface TableProps {
+  striped: boolean,
+  hover: boolean,
+  bordered: boolean,
+  small: boolean,
+  responsive: boolean,
+  children: any
 }
-
-const defaultProps = {
-  striped: false,
-  hover: false,
-  bordered: false,
-  small: false,
-  responsive: false,
-  children: undefined
-}
-
-export type TableProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Table({ striped, hover, bordered, small, responsive, children }: TableProps) {
   const { TableAdapter } = useComponents()
@@ -62,9 +49,6 @@ export function Table({ striped, hover, bordered, small, responsive, children }:
     }</TableAdapter>
   )
 }
-
-Table.propTypes = propTypes
-Table.defaultProps = defaultProps
 
 /**
  * Sub components

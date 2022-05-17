@@ -1,20 +1,11 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  onSubmit: PropTypes.func,
-  children: PropTypes.node
+export interface FormProps {
+  onSubmit: any,
+  children: any
 }
-
-const defaultProps = {
-  onSubmit: undefined,
-  children: undefined
-}
-
-export type FormProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Form({ onSubmit, children }: FormProps) {
   const { FormAdapter, FormItemAdapter } = useComponents()
@@ -33,6 +24,3 @@ export function Form({ onSubmit, children }: FormProps) {
     </FormAdapter>
   )
 }
-
-Form.propTypes = propTypes
-Form.defaultProps = defaultProps

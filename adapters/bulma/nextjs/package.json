@@ -1,0 +1,52 @@
+{
+  "name": "@quick-change/bulma-nextjs",
+  "version": "0.1.1",
+  "description": "Quick Change Adapter for Bulma (Next.js)",
+  "keywords": [
+    "react",
+    "design system"
+  ],
+  "homepage": "https://quick-change.netlify.app/",
+  "bugs": {
+    "url": "https://github.com/sarojaba/quick-change/issues",
+    "email": "sarojaba@gmail.com"
+  },
+  "author": "sarojaba <sarojaba@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarojaba/quick-change.git"
+  },
+  "module": "dist/index.js",
+  "source": "src/index.ts",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "build:ignore": "parcel build",
+    "build:all": "parcel build",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rbx": "^2.2.0"
+  },
+  "devDependencies": {
+    "@parcel/compressor-brotli": "^2.3.2",
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "@parcel/packager-ts": "^2.3.2",
+    "@parcel/reporter-cli": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@quick-change/core": "^0.1.7"
+  },
+  "files": [
+    "dist"
+  ]
+}

@@ -1,18 +1,10 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents, ScopeProvider } from '../providers'
 
-const propTypes = {
-  children: PropTypes.array
+export interface BreadcrumbProps {
+  children: any
 }
-
-const defaultProps = {
-  children: []
-}
-
-export type BreadcrumbProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Breadcrumb({ children }: BreadcrumbProps) {
   const { BreadcrumbAdapter } = useComponents()
@@ -25,9 +17,6 @@ export function Breadcrumb({ children }: BreadcrumbProps) {
     </BreadcrumbAdapter>
   )
 }
-
-Breadcrumb.propTypes = propTypes
-Breadcrumb.defaultProps = defaultProps
 
 /**
  * Sub components

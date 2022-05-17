@@ -1,6 +1,6 @@
 {
   "name": "@quick-change/core",
-  "version": "0.1.1",
+  "version": "0.1.7",
   "description": "Core library of Quick Change",
   "keywords": [
     "react",
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/sarojaba/quick-change.git"
   },
+  "type": "module",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

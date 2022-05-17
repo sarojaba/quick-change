@@ -1,32 +1,18 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  value: PropTypes.string,
-  label: PropTypes.string,
-  placeholder: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  disabled: PropTypes.bool,
-  readOnly: PropTypes.bool,
-  onChange: PropTypes.func,
-  onKeyDown: PropTypes.func
+export interface PasswordInputProps {
+  value: string,
+  label: string,
+  placeholder?: string,
+  // size: oneOf(['small', 'medium', 'large']),
+  size?: string,
+  disabled: boolean,
+  readOnly?: boolean,
+  onChange?: any,
+  onKeyDown?: any
 }
-
-const defaultProps = {
-  value: '',
-  label: undefined,
-  placeholder: '',
-  size: 'medium',
-  disabled: false,
-  readOnly: false,
-  onChange: undefined,
-  onKeyDown: undefined
-}
-
-export type PasswordInputProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function PasswordInput({ value, label, placeholder, size, disabled, readOnly, onChange, onKeyDown }: PasswordInputProps) {
 
@@ -45,6 +31,3 @@ export function PasswordInput({ value, label, placeholder, size, disabled, readO
     />
   )
 }
-
-PasswordInput.propTypes = propTypes
-PasswordInput.defaultProps = defaultProps

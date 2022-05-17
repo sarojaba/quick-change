@@ -1,18 +1,10 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  children: PropTypes.node
+export interface TableDataCellProps {
+  children: any
 }
-
-const defaultProps = {
-  children: undefined
-}
-
-export type TableDataCellProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function TableDataCell({ children }: TableDataCellProps) {
   const { TableDataCellAdapter } = useComponents()
@@ -22,6 +14,3 @@ export function TableDataCell({ children }: TableDataCellProps) {
     </TableDataCellAdapter>
   )
 }
-
-TableDataCell.propTypes = propTypes
-TableDataCell.defaultProps = defaultProps

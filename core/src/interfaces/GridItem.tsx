@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  span: PropTypes.number,
-  offset: PropTypes.number,
-  children: PropTypes.node
+export interface GridItemProps {
+  span?: number,
+  offset?: number,
+  children?: any
 }
-
-const defaultProps = {
-  span: undefined,
-  offset: undefined,
-  chilren: undefined
-}
-
-export type GridItemProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function GridItem({ span, offset, children }: GridItemProps) {
   const { GridItemAdapter } = useComponents()
@@ -24,6 +14,3 @@ export function GridItem({ span, offset, children }: GridItemProps) {
     <GridItemAdapter span={span} offset={offset}>{children}</GridItemAdapter>
   )
 }
-
-GridItem.propTypes = propTypes
-GridItem.defaultProps = defaultProps

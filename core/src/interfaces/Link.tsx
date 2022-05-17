@@ -1,22 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  href: PropTypes.string,
-  external: PropTypes.bool,
-  children: PropTypes.node
+export interface LinkProps {
+  href: string,
+  external: boolean,
+  children: any
 }
-
-const defaultProps = {
-  href: '#',
-  external: false,
-  children: undefined
-}
-
-export type LinkProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Link({ href, external, children }: LinkProps) {
   const { LinkAdapter } = useComponents()
@@ -29,6 +19,3 @@ export function Link({ href, external, children }: LinkProps) {
     </LinkAdapter>
   )
 }
-
-Link.propTypes = propTypes
-Link.defaultProps = defaultProps

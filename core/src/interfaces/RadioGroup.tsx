@@ -1,30 +1,16 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  name: PropTypes.string,
-  label: PropTypes.string,
-  value: PropTypes.any,
-  inline: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func,
-  children: PropTypes.node
+export interface RadioGroupProps {
+  name?: string,
+  label?: string,
+  value?: string,
+  inline?: boolean,
+  disabled?: boolean,
+  onChange?: any,
+  children: any
 }
-
-const defaultProps = {
-  name: undefined,
-  label: undefined,
-  value: undefined,
-  inline: false,
-  disabled: false,
-  onChange: undefined,
-  children: undefined
-}
-
-export type RadioGroupProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function RadioGroup({ name, label, value, inline, disabled, onChange, children }: RadioGroupProps) {
   const { RadioGroupAdapter } = useComponents()
@@ -41,6 +27,3 @@ export function RadioGroup({ name, label, value, inline, disabled, onChange, chi
     </RadioGroupAdapter>
   )
 }
-
-RadioGroup.propTypes = propTypes
-RadioGroup.defaultProps = defaultProps

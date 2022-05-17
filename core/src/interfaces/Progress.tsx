@@ -1,26 +1,15 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  type: PropTypes.string,
-  value: PropTypes.number,
-  max: PropTypes.number,
-  label: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+export interface ProgressProps {
+  type: string,
+  value: number,
+  max: number,
+  label: boolean,
+  // size: oneOf(['small', 'medium', 'large'])
+  size: string
 }
-
-const defaultProps = {
-  type: 'primary',
-  value: 0,
-  max: 100,
-  label: false,
-  size: 'medium'
-}
-
-export type ProgressProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Progress({ type, value, max, label, size }: ProgressProps) {
   const { ProgressAdapter } = useComponents()
@@ -35,6 +24,3 @@ export function Progress({ type, value, max, label, size }: ProgressProps) {
     />
   )
 }
-
-Progress.propTypes = propTypes
-Progress.defaultProps = defaultProps

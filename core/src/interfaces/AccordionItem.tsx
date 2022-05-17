@@ -1,20 +1,11 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node
+export interface AccordionItemProps {
+  title: string,
+  children: any
 }
-
-const defaultProps = {
-  title: '',
-  children: undefined
-}
-
-export type AccordionItemProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function AccordionItem({ title, children }: AccordionItemProps) {
   const { AccordionItemAdapter } = useComponents()
@@ -24,6 +15,3 @@ export function AccordionItem({ title, children }: AccordionItemProps) {
     </AccordionItemAdapter>
   )
 }
-
-AccordionItem.propTypes = propTypes
-AccordionItem.defaultProps = defaultProps

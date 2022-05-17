@@ -1,30 +1,17 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  value: PropTypes.string,
-  placeholder: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  disabled: PropTypes.bool,
-  readOnly: PropTypes.bool,
-  onChange: PropTypes.func,
-  onKeyDown: PropTypes.func
+export interface NumberInputProps {
+  value: string,
+  placeholder?: string,
+  // size: oneOf(['small', 'medium', 'large']),
+  size?: string,
+  disabled?: boolean,
+  readOnly?: boolean,
+  onChange?: any,
+  onKeyDown?: any
 }
-
-const defaultProps = {
-  value: '',
-  placeholder: '',
-  size: 'medium',
-  disabled: false,
-  readOnly: false,
-  onChange: undefined,
-  onKeyDown: undefined
-}
-
-export type NumberInputProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function NumberInput({ value, placeholder, size, disabled, readOnly, onChange, onKeyDown }: NumberInputProps) {
 
@@ -42,6 +29,3 @@ export function NumberInput({ value, placeholder, size, disabled, readOnly, onCh
     />
   )
 }
-
-NumberInput.propTypes = propTypes
-NumberInput.defaultProps = defaultProps

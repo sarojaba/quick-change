@@ -1,18 +1,10 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  children: PropTypes.node
+export interface SampleProps {
+  children: any
 }
-
-const defaultProps = {
-  children: undefined
-}
-
-export type SampleProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Sample({ children }: SampleProps) {
   const { SampleAdapter } = useComponents()
@@ -21,6 +13,3 @@ export function Sample({ children }: SampleProps) {
     <SampleAdapter>{children}</SampleAdapter>
   )
 }
-
-Sample.propTypes = propTypes
-Sample.defaultProps = defaultProps

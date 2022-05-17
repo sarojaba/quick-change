@@ -1,22 +1,13 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  text: PropTypes.string,
-  position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
-  children: PropTypes.node
+export interface TooltipProps {
+  text: string,
+  // position: oneOf(['top', 'bottom', 'left', 'right']),
+  position: string,
+  children: any
 }
-
-const defaultProps = {
-  text: '',
-  position: 'top',
-  children: undefined
-}
-
-export type TooltipProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Tooltip({ text, position, children }: TooltipProps) {
   const { TooltipAdapter } = useComponents()
@@ -26,6 +17,3 @@ export function Tooltip({ text, position, children }: TooltipProps) {
     </TooltipAdapter>
   )
 }
-
-Tooltip.propTypes = propTypes
-Tooltip.defaultProps = defaultProps

@@ -1,20 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useScope } from '../providers'
 
 import { Accordion, Breadcrumb, Nav, Select } from '../interfaces'
 
-const propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node)
+export interface ItemProps {
+  children: any
 }
-
-const defaultProps = {
-  children: []
-}
-
-export type ItemProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function Item({ icon, label, name, value, href, selected, disabled, children }: any) {
   const scope = useScope()
@@ -55,6 +47,3 @@ export function Item({ icon, label, name, value, href, selected, disabled, child
       return 'Error'
   }
 }
-
-Item.propTypes = propTypes
-Item.defaultProps = defaultProps

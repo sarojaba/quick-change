@@ -1,20 +1,12 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
-import PropsType from 'props-type'
 
 import { useComponents } from '../providers'
 
-const propTypes = {
-  as: PropTypes.oneOf(['ordered', 'unordered']),
-  children: PropTypes.node
+export interface ListProps {
+  // as: oneOf(['ordered', 'unordered']),
+  as: string,
+  children: any
 }
-
-const defaultProps = {
-  as: 'unordered',
-  children: undefined
-}
-
-export type ListProps = PropsType<typeof propTypes, typeof defaultProps>
 
 export function List({ as, children }: ListProps) {
   const { ListAdapter } = useComponents()
@@ -24,9 +16,6 @@ export function List({ as, children }: ListProps) {
     </ListAdapter>
   )
 }
-
-List.propTypes = propTypes
-List.defaultProps = defaultProps
 
 /**
  * Sub components
