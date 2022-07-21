@@ -6,6 +6,8 @@ import { Button } from 'rbx'
 
 export function ButtonAdapter({ icon, type, shape, size, disabled, block, onClick, children }: ButtonProps) {
   return (
-    <Button color={type} size={size}>{children}</Button>
+    <Button color={type} size={size} onClick={onClick}>
+      {children}
+    </Button>
   )
 }
