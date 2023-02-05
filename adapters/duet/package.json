@@ -31,11 +31,7 @@
     "parcel": "^2.3.2"
   },
   "dependencies": {
-    "@duetds/css": "^1.7.13",
-    "@duetds/fonts": "^1.4.13",
-    "@duetds/icons": "^2.2.13",
-    "@duetds/react": "^4.35.2",
-    "@duetds/tokens": "^2.4.13",
+    "@duetds/react": "^6.5.2",
     "@quick-change/core": "file:../../core"
   },
   "files": [
